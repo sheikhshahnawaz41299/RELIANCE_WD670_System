@@ -1,0 +1,372 @@
+
+<div class="line navi" >
+  <nav >
+   <div class="top-nav s-12 l-12">
+    <ul>
+    <li><a class="to_status"><span class="icon">&#235;</span><span class="text">STATUS</span></a></li>
+    <li><a class="to_connect"><span class="icon">&#207;</span><span class="text">CONNECTION</span></a></li>
+    <li><a class="to_sd" style="padding-bottom:0.5em;padding-top:0.8em;margin-bottom:0.1em;"><span class="icon" >&#229;&nbsp;</span><span class="text">WIFI DISK</span></a></li>
+    <li class="active"><a class="to_setting"><span class="icon">&#216;</span><span class="text">SETTINGS</span></a></li>
+    <!--<li><a class="to_smart"><span class="icon">&#201;</span><span class="text">MY SMARTFREN</span></a></li>-->
+    <li><a class="to_about" style="padding-bottom:0.5em;padding-top:0.8em;"><span class="icon">&#231;</span><span class="text">ABOUT</span></a></li>            
+    </ul>
+  </div>
+
+  </nav>
+</div>
+
+
+<div class="line width_100" >
+<!-- ASIDE NAV -->
+<div class="s-12 l-2" id="aside">
+<div class="aside-nav" >
+  <ul>
+  <li id="to_setting"><a>Quick Setting</a></li>
+  <li id="to_wifi"><a>WiFi Setting</a></li>
+  <li id="to_net"><a>Network Setting</a></li>
+  <li id="to_op"><a>Network Operators</a></li>
+  <li id="to_roam" style="display:none;"><a>Roaming</a></li>
+  <li id="to_sys"><a>Admin Setting</a></li>
+  <li id="to_set_sd" class="active-item"><a href="javascript:;">Storage Setting</a></li>
+  <li><a>Advance </a>
+    <ul>
+    <li id="to_dhcp"><a>DHCP</a></li>
+    <!--<li id="to_set_sms"><a>SMS Setting</a></li>-->
+    <li id="to_set_pin" style="display:none;"><a>PIN Setting</a></li>
+    <li id="to_set_mac"><a>MAC Filter</a></li>
+    <li id="to_set_ip"><a>IP Filter</a></li>
+    <li id="to_set_url"><a>URL Filter</a></li>
+    <li id="to_set_port"><a>Port Filter</a></li>
+    <li id="to_pf"><a>Port Forward</a></li>
+    <li id="to_ddns"><a>DDNS</a></li>
+    <li id="to_wps"><a>WPS</a></li>
+    <li id="to_wds"><a>WDS</a></li>
+    <li id="to_update"><a>Update</a></li>
+
+    </ul>
+  </li>
+  </ul>
+</div>
+</div>
+<div class="s-12 l-10" id="main_content">
+<h3 style="">STORAGE SETTING</h3>
+<div class="line" style="padding:0em 0.6em;">
+  <form class="customform" action="#">
+  <div class="margin">
+  <div class="line">
+  <div class="s-12 l-3 line_form">
+  <label class="name">Storage Username</label>
+  </div>
+  <div class="s-12 l-5">
+  <input type="text" id="user" name="user" title="user" placeholder="USER" value="sdcard" maxlength="32"/>
+  </div>
+  </div>
+
+  <div class="line">
+  <div class="s-12 l-3 line_form">
+  <label class="name">Storage Password</label>
+  </div>
+  <div class="s-12 l-5">
+  <input type="password" id="pwd" name="pwd" title="password" placeholder="PASSWORD" autocomplete="new-password" value="sdcard" maxlength="32"/>
+  </div>
+  <div class="s-12 l-4">
+    <div class="show_pwd" for="pwd">
+    <label class="check">&#238;</label><label class="after">Show Password</label> <input class="show_pwd_st" type="hidden" value="0" />
+    </div>
+  </div>
+  </div>
+
+
+  <div class="line">
+  <div class="s-12 l-3 line_form">
+  <label class="name">Storage Mode</label>
+  </div>
+  <div class="s-12 l-5">
+    <select name="sd_mode" id="sd_mode">
+    <option value="0">Local Storage</option>
+    <option selected value="1">WiFi Storage</option>
+    <option value="2">Internet Storage</option>
+    </select>
+  </div>
+  </div>
+
+  <div class="line" id="div_storage_ip">
+  <div class="s-12 l-3 line_form">
+  <label class="name">Storage Address</label>
+  </div>
+  <div class="s-12 l-5 line_form">
+  <span id="storage_ip"></span>
+  </div>
+
+  </div>
+
+
+  <div class="s-12 l-8">
+  <div class="s-12 l-9" id="errHint">
+  </div>
+  <div class="s-12 l-3 right">
+  <div class="button" id="to_submit">APPLY</div>
+  </div>
+  </div>
+  </div>
+  </form>
+  
+</div>
+</div>
+</div>
+<style type="text/css">
+
+
+.width_100{width:100%;font-size:1em;}
+
+.customform label.name{font-size: 1.1em;padding-left:2em;}
+.customform label.check{font-size: 1.8em; }
+.customform label.after{font-size: 1em; }
+.customform .show_pwd{height:2.7em;line-height:2.7em;vertical-align:middle;margin-left:1.6em;}
+
+
+@media screen and (min-width:801px) {
+#aside{height:30em;background:#F0F0F0;}
+#main_content{background:#EEE;color:#444;font-size:0.9em;height:33.4em;
+filter:alpha(opacity=95);  
+-moz-opacity:0.95;  
+-khtml-opacity: 0.95;  
+opacity: 0.95;  
+}
+#main_content h3{padding:1em;color:#444;}
+}
+
+@media screen and (max-width:935px) {
+.customform label.name{font-size: 1em;padding-left:2em;}
+}
+
+@media screen and (max-width:855px) {
+.customform label.name{font-size: 0.9em;padding-left:2em;}
+}
+
+
+@media screen and (max-width:800px) {
+.width_100{width:100%;font-size: 1em;}
+#aside{background:#F0F0F0;}
+#main_content{margin-top:0.8em;background:#EEE;color:#444;font-size:0.8em;}
+#main_content h3{padding:0.4em;color:#444;}
+.customform label.name{font-size: 1.2em;padding-left:1em;}
+#storage_ip{padding-left: 1em;}
+}
+
+#errHint{color: red;text-align: center;}
+
+#storage_ip a{color: blue;text-decoration: underline;}
+
+</style>
+<script type="text/javascript">
+
+function close_pop_diag(){
+easyDialog.close();
+//return false;
+}
+
+function load_mark_set(){
+
+}
+
+
+function pop_submit_result(txt){
+  var content = "<div class='pop_div'><div style='text-align:center;'>"+txt+"</div></div>";
+  easyDialog.open({
+        container : {
+            header : 'Setting',
+            content : content,
+            yesText : 'OK',
+            yesFn : close_pop_diag
+        },
+        callback: load_setting,
+        fixed : false
+    });
+  return false;
+}
+
+function cancel_sd_mode(){
+  $('#sd_mode').val(sd_mode);
+}
+
+$('#sd_mode').on('change',function(event){
+  var mode=parseInt($('#sd_mode').val());
+  if(!mode || !sd_mode){
+    var content='Device will be reboot to effect, Do you want to Continue?'
+    if(mode==0 && usb_state==0){
+      content+="Please Plug Device to Computer";
+    }
+  easyDialog.open({
+    container : {
+    header : 'Confirm',
+    content : content,
+    yesText : 'Yes',
+    yesFn : close_pop_diag,
+    noText : 'No',
+    noFn : cancel_sd_mode
+    },
+    callback: false,
+    fixed : true
+  });
+  }
+});
+
+function checkcharwidth(str){
+var cArr = str.match(/[^\x00-\xff]/ig);
+return (cArr == null ? false : true); 
+}
+
+$('#to_submit').click(function(event){
+  event.preventDefault();
+
+  if(!(dsc&0x04)){
+    pop_submit_result('SD card option is not available.<br>Please contact your administrator!');
+    return false;
+  }
+
+  var r_username=$("#user").val();
+  var r_pwd=$("#pwd").val();
+
+if(checkcharwidth(r_username)){
+    $("#errHint").html('Username must be ASCII character');
+    $('#user').focus();
+    return false;
+  }
+  if(checkcharwidth(r_pwd)){
+    $("#errHint").html('Password must be ASCII character');
+    $('#pwd').focus();
+    return false;
+  }
+
+  if(r_username.length<5){
+    $("#errHint").html("Storage username too short");
+    return false;
+  }
+  if(r_pwd.length<5){
+    $("#errHint").html("Storage password too short");
+    return false;
+  }
+  var post_data='r_user='+esc(r_username)+'&r_pwd='+esc(r_pwd);
+  var mode=parseInt($('#sd_mode').val());
+  if(mode!=sd_mode){
+    if(mode==0) {
+      post_data+="&mode=0&reboot=1";
+    }
+    else{
+      if(mode==1) post_data+="&mode=1";
+      else if(mode==2) post_data+="&mode=2";
+      if(sd_mode==0) post_data+='&reboot=1'
+    }
+  }
+  else{
+    post_data+=("&mode="+mode);
+  }
+
+  $("#errHint").html('');
+    $.ajax({ 
+      url: "/wxml/set_sd.xml",
+      type: "Post", 
+      timeout: 8000,
+      cache: false,
+      datatype: "xml",
+      data: post_data, 
+      success: function(data, status) {
+        var ret0 = parseInt($(data).find("ruser").text());
+        var ret1 = parseInt($(data).find("rpwd").text());
+        var ret2 = parseInt($(data).find("mount").text());
+        inited=0;
+        if(ret0&& ret1) pop_submit_result('Setting apply success!');
+        else pop_submit_result('Setting apply fail!');
+
+      },
+      error: function(x, t, m){
+        if(t==="timeout"){
+
+        }  
+      }
+    })
+
+
+//  pop_submit_result();
+});
+
+var sd_state,usb_state,dev_mac,sd_mode=1,inited=0;
+var ismobile=navigator.userAgent.toLowerCase().match(/(ipad)|(iphone)|(ipod)|(android)|(webos)|(blackberry)|(iemobile)/i);
+function refresh_data(data){
+  if(!inited)
+  {
+    inited=1;
+    $("#errHint").html('');
+    // var dsc = $(data).find("dsc").text();
+    // if(dsc&0x01) $('#to_set_pin').show();
+    sd_state = parseInt($(data).find("sd_st").text());
+    usb_state = parseInt($(data).find("usb_st").text());
+
+    if(sd_state==2) {
+      $('#sd_mode').val(0);
+      sd_mode = 0;
+    }
+    else {
+      sd_mode=parseInt($(data).find("sd_mode").text());
+      $('#sd_mode').val(sd_mode);
+    }
+    var rlogin_username= $(data).find("rlogin_username").text();
+    var rlogin_pwd=$(data).find("rlogin_pwd").text();
+    $('#user').val(rlogin_username);
+    $('#pwd').val(rlogin_pwd);
+  }
+
+  if(sd_mode==2){
+    var wan_ip=$(data).find("wan_ip").text();
+    var wan_ipv6 = $(data).find("wan_ipv6").text();
+    if(wan_ip!='-' && wan_ip!='-1'){
+      $('#storage_ip').html('<a target="_blank" href="http://'+wan_ip+(ismobile?'/msd.html':'/sdcard.html')+'">http://'+wan_ip+ '</a>');  
+    }
+    else {
+      if(wan_ipv6==-1 || wan_ipv6=="-") $('#storage_ip').html('Network disconnected');
+      else $('#storage_ip').html('&nbsp;');
+    }
+    $('#div_storage_ip').show(); 
+  }
+  else $('#div_storage_ip').hide();
+}
+
+function load_setting(){
+  
+  $.ajax({ 
+    url: "mark_set_sd.w.xml",
+    type: "Get", 
+    timeout: 8000,
+    cache: false,
+    datatype: "xml",
+//    data: { path:curr_path,page:curr_page,filter:'255'  }, 
+    success: function(data, status) {
+      refresh_data(data);
+    },
+    error: function(x, t, m){
+      if(t==="timeout"){
+
+      }  
+    }
+  })
+}
+
+
+
+
+function load_mark(url){
+var dsc=parseInt(<% get_version_dsc(); %>);
+if(dsc&0x01) $('#to_set_pin').show();
+if(dsc&0x02){
+  $('#to_roam').show();
+}
+  if(interval_timer) clearInterval(interval_timer);
+  if(url=="set_sd.html"){
+    load_setting();
+    interval_timer=setInterval(load_setting,1000);
+  }
+}
+
+</script>
+

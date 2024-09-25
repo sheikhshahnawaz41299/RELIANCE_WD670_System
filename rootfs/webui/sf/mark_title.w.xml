@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<title>
+<timeout><% timeout_check(); %></timeout>
+<login><% get_login(); %></login>
+<lang><% get_lang(); %></lang>
+<dsc><% get_version_dsc(); %></dsc>
+<onex><% get_sig_ind(); %></onex>
+<wifi><% get_wifi_state(); %></wifi>
+<batt><% get_battery_ind(); %></batt>
+<batt_p><% get_batt_percent(); %></batt_p>
+<cspn><% get_cspn_string(); %></cspn>
+<pin><% get_ruim_pin_state(); %></pin>
+<usb><% get_usbst(); %></usb>
+<netstatus><% get_network_status();%></netstatus>
+<op_mode><% get_service_in_use(); %></op_mode>
+<roam><% get_roam_status();%></roam>
+<sd_st><% get_sdst(); %></sd_st>
+<rate><% get_tx_rx_st(); %></rate>
+<fota><% fota_check_result("1"); %></fota>
+<update><% stats_update(); %></update>
+<conn_time><% get_time(); %></conn_time>
+<update_rate><% update_data_rate(); %></update_rate>
+<up_rate><% get_current_tx_rate(); %></up_rate>
+<dl_rate><% get_current_rx_rate(); %></dl_rate>
+</title>

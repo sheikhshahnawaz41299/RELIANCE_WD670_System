@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<status>
+<op_mode><% get_service_in_use();%></op_mode>
+<netstatus><% get_network_status();%></netstatus>
+<dial_mode><% get_dial_mode();%></dial_mode>
+<update><% stats_update(); %></update>
+<tx><% get_tx(); %></tx>
+<rx><% get_rx(); %></rx>
+<all><% get_all(); %></all>
+<active_time><% get_time(); %></active_time>
+<t_tx><% get_t_tx(); %></t_tx>
+<t_rx><% get_t_rx(); %></t_rx>
+<t_all><% get_t_all(); %></t_all>
+<t_active_time><% get_t_time(); %></t_active_time>
+<update_rate><% update_data_rate(); %></update_rate>
+<up_rate><% get_current_tx_rate(); %></up_rate>
+<dl_rate><% get_current_rx_rate(); %></dl_rate>
+</status>

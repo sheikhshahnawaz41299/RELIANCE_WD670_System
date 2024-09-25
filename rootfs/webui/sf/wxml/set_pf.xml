@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pf>
+<enable>set_pf_enable(enable)</enable>
+<set0>set_pf_item(0,name0,um0,rm0,mac0)</set0>
+<set1>set_pf_item(1,name1,um1,rm1,mac1)</set1>
+<set2>set_pf_item(2,name2,um2,rm2,mac2)</set2>
+<set3>set_pf_item(3,name3,um3,rm3,mac3)</set3>
+<set4>set_pf_item(4,name4,um4,rm4,mac4)</set4>
+<done>set_pf_config_done()</done>
+</pf>

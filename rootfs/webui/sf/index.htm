@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="renderer" content="webkit">
+  <title>RELIANCE 4G</title>
+	<link href="favicon.ico" mce_href="favicon.ico" rel="bookmark" type="image/x-icon" />  
+	<link href="favicon.ico" mce_href="favicon.ico" rel="icon" type="image/x-icon" />  
+	<link href="favicon.ico" mce_href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="stylesheet" href="components.css">
+  <link rel="stylesheet" href="responsee.css">
+  <link rel="stylesheet" href="easydialog.css">
+  <script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+  <script type="text/javascript" src="jquery-ui.min.js"></script>
+  <script type="text/javascript" src="modernizr.js"></script>
+  <script type="text/javascript" src="responsee.js"></script>  
+  <script type="text/javascript" src="easydialog.min.js"></script>
+	<script type="text/javascript" src="footable.min.js"></script>
+	<link rel="stylesheet" href="footable.min.css"/>
+<!--[if lt IE 9]>
+<script src="html5.js"></script>
+<script src="css3-mediaqueries.js"></script>
+<link rel="stylesheet" href="old_IE.css">
+<![endif]-->
+<style>
+body{
+background:url(/img/bg.jpg);
+filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+-moz-background-size:100% 100%;
+background-size:100% 100%;
+color: white;
+background-attachment:fixed;
+}
+.align_right{display: inline-block;}
+/*.algin_center{margin-top:2em;}*/
+
+.logo_p{width:282px;height: 50px;background-repeat: no-repeat;display: inline-block;position: relative;}
+.logo{
+	background-image:url(img/rcom.png);  background-position: 0 0;-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;background-size: 100% 100%;;cursor: pointer; 
+	filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+}
+
+/*#logo01{display:inline-block;vertical-align:middle;text-align:right;font-size:2.8em;}
+#logo02{display:inline-block;vertical-align:middle;text-align:left;font-size:1.4em;}
+#logo03{font-size:2em;vertical-align:middle;color:red;}
+#logo04{font-size:1.4em;vertical-align:middle;color:red;}*/
+
+#product_name{margin-top:0.4em;text-align: left;}
+
+@media screen and (max-width:800px) {
+#product_name{margin:0;margin:0.4em 0;text-align: center;}
+.to_home_mobi{display: inline-block;}
+.to_home{display: none;}
+.algin_center{margin-top:2.4em;margin-left:0;}
+}
+
+@media screen and (min-width:801px) {
+.to_home_mobi{display: none;}
+.to_home{display: inline-block;}
+}
+
+
+#div_a_rate{
+	display: inline-block; 
+	width: auto; 
+}
+
+
+@media screen and (max-width:600px) {
+body{
+background:url(/img/bg.jpg);
+filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+color: white;
+background-attachment:fixed;
+}
+
+.align_right{text-align: right;}
+.algin_center{margin-top:5em;margin-left:0;}
+#product_name{margin:0;margin:0.4em 0;text-align: center;}
+}
+@media screen and (max-width:360px) {
+	.logo_p{width:210px;height:38px;background-repeat: no-repeat;display: inline-block;}
+	.algin_center{margin-top:6em;margin-left:0;}
+}
+
+@media screen and (max-width:340px) {
+	.logo_p{width:210px;height:38px;background-repeat: no-repeat;display: inline-block;}
+	.algin_center{margin-top:6em;margin-left:0;}
+}
+
+
+/*@media screen and (max-width:880px) {
+#logo01{display:inline-block;vertical-align:middle;text-align:right;font-size:2.4em;}
+#logo02{display:inline-block;vertical-align:middle;text-align:left;font-size:1.2em;}
+#logo03{font-size:1.8em;vertical-align:middle;color:red;}
+#logo04{font-size:1.2em;vertical-align:middle;color:red;}
+}
+*/
+.red{color: red;}
+.blue{color: #2878BC;}
+.normal{color: white;}
+
+#battery{/*margin-left:0.2em;*/width: 2.4em;display: inline-block;}
+#signal{margin-left:0.3em;}
+
+#traffic_01{font-size:2.2em;margin-left:-0.4em;}
+#traffic_02{font-size:2.2em;margin-left:-1.2em;}
+.traffic_up,.traffic_dl,.traffic_normal{background: transparent;}
+
+
+.traffic_up,.traffic_dl{color: #0F0;}
+
+/*@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) { 
+	.traffic_normal{background: transparent;}
+    .traffic_up{
+        background-image: -webkit-linear-gradient(top, #fff, #0F0 25%, #0F0 50%, #0F0 75%,#fff);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-background-size: 100% 200%;
+        -webkit-animation: masked-animation1 2s infinite linear;
+    }
+    .traffic_dl{
+        background-image: -webkit-linear-gradient(bottom, #fff, #0F0 25%, #0F0 50%, #0F0 75%,#fff);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-background-size: 100% 200%;
+        -webkit-animation: masked-animation2 2s infinite linear;
+    }
+    @-webkit-keyframes masked-animation1 {
+	    0%  { background-position: 0 -100%;}
+	    100% { background-position: 0 0;}
+	}
+	@-webkit-keyframes masked-animation2 {
+	    0%  { background-position: 0 0;}
+	    100% { background-position: 0 -100%;}
+	}
+}*/
+
+
+
+
+
+
+#traffic_21{font-size:2.2em;margin-left:-0.4em;color:#2F2;}
+#traffic_22{font-size:2.2em;margin-left:-1em;color:#2F2;}
+
+.traffic_11{color:#2F2;}
+.traffic_12{color:#2F2;}
+#roam{font-size: 1em;color:#EFE;}
+#wifi{font-size:1.8em;margin-right:0.2em;}
+
+#wifi.on{color: white;}
+#wifi.off{color: #444;}
+#lang{cursor: pointer;}
+
+
+#waiting{text-align: center;vertical-align: middle;height: 2em;line-height: 2em;}
+#waiting_txt{height: 2em;line-height: 2em;vertical-align: top;display: inline-block;}
+
+
+#sms_send_tips{width:100%;height:100%;text-align: center;}
+
+#batt_percent{font-size:0.8em;color: rgb(0, 187, 255);margin-left: -2.6em;vertical-align: text-top;display:inline-block;width: 2.6em;text-align: center;}
+#batt_percent_ie{font-size:0.8em;color: rgb(0, 187, 255);margin-left: -2.4em;vertical-align: text-top;display:inline-block;width: 2.6em;text-align: center;}
+
+
+#conn_sw{font-size: 1.6em;cursor: pointer;margin-left: 0.1em;}
+.conn_off{color:rgb(120,130,140)}
+.conn_on{color: rgb(130,210,240)}
+#conn_off_x{color:red;margin-left: -0.94em;font-size: 0.9em;}
+#conn_st{margin-left: 0.4em;}
+#lte_4g{font-family: Arial;font-size: 1.3em; padding-left: 1.3em;padding-top: 0.2em;}
+
+
+#up_rate{margin-left:-0.65em;margin-right: 1em; display: inline-block;text-align: left;}
+#dl_rate{margin-left: 0.2em;display: inline-block;text-align: left;}
+
+
+
+@media screen and (min-width:1161px) {
+	.line1{
+		width: 1160px;
+		margin: 0 auto;
+	}
+	#title{height: 5em;}
+}
+
+@media screen and (max-width:1160px) {
+.line1{
+    margin: 0 auto;
+    max-width: 60em;
+    padding: 0 0.625em;
+}
+#title{height: 10em;}
+}
+
+@media screen and (max-width:660px) {
+#title{height: 12em;}
+}
+@media screen and (max-width:600px) {
+#title{height: 10em;}
+}
+
+@media screen and (max-width:380px) {
+#title{height: 12em;}
+#div_a_rate{
+	display: inline-block; 
+	width: 13em; 
+}
+}
+
+
+#main{margin-top: 12px;}
+
+</style>
+</head>
+<body class="size-960" >
+<!-- style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/bg.jpg', sizingMethod='scale';background-attachment:fixed;" -->
+<!--<div id="Layer1" style="position:absolute; width:100%; height:100%; z-index:-1">    
+<img src="login_801.png" height="100%" width="100%"/>    
+</div>-->
+<div id="main">
+  <!-- HEADER -->
+  <header id="title">
+	<div class="line1">
+		<div class="s-12 l-4" >
+		<div class="s-12 l-12 ">
+		<span class="logo_p logo">
+			<span id="logo">&nbsp;</span>		
+		</span>
+
+
+		<span class="to_home_mobi" style="cursor:pointer;float: right;"><span style="display:inline-block;vertical-align:middle;font-size:2.2em;">&#204; </span>
+		<!-- <span>HOME</span> -->
+		</span>
+		</div>
+		<div class="s-12 l-12 " id="lte_4g">
+		4G | LTE
+		</div>
+		</div>
+
+		<div class="s-12 l-8" style="color:#FFF;">
+
+		<div class="s-12 l-12" style="color:#FFF;text-align:right;font-size: 1.1em;">
+<!-- 		<div style="display:inline-block;vertical-align:baseline;">
+		<div id="to_update" style="display:none;cursor:pointer;">
+		System update available<span style="font-size:1.8em;">&nbsp;&#228;&nbsp;</span>
+		</div>
+		</div> -->
+
+
+		<!-- <div class="s-12 l-6" style="color:#FFF;text-align:right;"> -->
+		<div style="display:inline-block;margin-top: 16px;" id="m_info">
+
+		<div style="display: inline-block;">
+		<span id="signal">
+			
+		</span><span id="cspn"></span>
+		<span id="roam"></span>
+		
+		<span id="wifi" style="display: none;">&#211;</span>
+		
+		<span id="a_conn_time" style="display: none;">
+		<span style="margin-left: 0.2em;">Connected Time: </span><span id="conn_time" style="margin-left: 0.1em;"></span></span>
+		</div>
+		<div id="div_a_rate" style="display: none;">
+		<span style="margin-left: 0.2em;" id="a_rate">
+		<span id="traffic_01">&#339;</span><span id="up_rate"></span>
+		<span id="traffic_02">&#376;</span><span id="dl_rate"></span>
+		</span>
+		</div>
+		<div style="display: inline-block;">
+		<span id="conn_sw" class="conn_off"></span><span id="conn_st"></span></div>
+		<span id="battery"></span>
+		<span class="to_home" style="cursor:pointer;"><span style="display:inline-block;margin-left:0.1em;vertical-align:middle;font-size:2.2em;">&#204; </span>
+		<!-- <span>HOME</span> -->
+		</span>
+		<div>
+		
+		<span id="to_update" style="display:none;cursor:pointer;font-size: 1em;">
+		System update available<span style="font-size:1.8em;">&nbsp;&#228;&nbsp;</span>
+		</span> </div>
+
+		<!-- <span style="font-size:2em;">|</span>
+		<span id="lang"> ENG </span><span style="font-size:1.2em;margin-left:0.2em;cursor:pointer;">&#217;</span> 
+		<span style="font-size:2em;">|</span>-->
+		<span id="to_login" style="cursor:pointer;display: none;"><span style="font-size:1.4em;margin-right:0.2em;">&#202;</span><span id="login_st">LOGIN</span></span> 
+		</div>
+		</div>
+
+		<div class="s-12 l-12" style="color:#FFF;text-align:right;">
+
+		<!-- <div class="s-12 l-8" style="color:#FFF;text-align:right;"> -->
+
+
+
+		</div>
+
+		<!-- <div class="s-12 l-4" style="color:#FFF;text-align:right;"> -->
+		<div class="s-12 l-12" style="color:#FFF;text-align:right;display: none;">
+		<div style="display: inline-block;">
+		<span style="font-size:2.4em;" id="hr_min"></span>
+		<span style="display:inline-block;" id="date"></span>
+		
+		</div>
+
+		
+		</div>
+
+
+		</div>
+
+	</div>
+
+  </header> 
+
+
+  <section class="algin_center" >
+
+  </section>     
+
+<!-- <div class="line">
+  <div class="s-12 l-12" id="product_name">
+  </div>
+   
+</div> -->
+
+  <!-- FOOTER -->
+  <footer class="line">
+
+	  <div class="s-12 l-6 center" style="text-align:center;color:white;font-weight:100%;font-size:80%;margin-top:0em;">
+		<br>
+		<p>Customer Care:- 1800-3000-5555</p>
+		<br>
+		<p>Copyright &copy; 2016.  All Rights Reserved.</p>
+	  </div>
+
+ 
+  </footer>
+  <img src="img/loading.gif" style="display:none;">
+</div>
+<script type="text/javascript">
+function loadXMLDoc(url){
+  var xmlHttp=null;
+  if (window.XMLHttpRequest){
+    xmlHttp=new XMLHttpRequest();
+  }
+  else if (window.ActiveXObject){
+    xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  if (xmlHttp!=null)
+  {
+    xmlHttp.onreadystatechange=function()
+    {
+      if (xmlHttp.readyState==4){
+        window.location.reload(true);
+      }
+    }
+    xmlHttp.open("GET",url,true);
+    xmlHttp.setRequestHeader("If-Modified-Since","0");
+    xmlHttp.send(null);
+  }
+  else{
+    window.location.reload(true);
+  }
+}
+
+
+function disableCacheRefresh(){
+  loadXMLDoc("/mark_cache.w.xml");
+}
+
+
+if (typeof jQuery == 'undefined') { 
+  disableCacheRefresh();
+}
+
+if (( $.browser.msie && parseInt($.browser.version)<=8) || ( $.browser.mozilla && parseInt($.browser.version)<=3)){
+	alert("Please Use Chrome/Firefox4+/IE9+ Modern Browser!");
+	top.location.href="http://www.google.com/chrome/";
+}
+
+
+var target="<% url_get_target_test(); %>";
+var login = <% get_login(); %>;
+var sd_st = <% get_sdst(); %>;
+var dev_time='<% get_sys_time(); %>';
+
+if(dev_time.split(' ')[1].split('-')[0]=='1970'){
+	var date = new Date();
+	var post_data= 'time='+date.getUTCFullYear()+'-'+parseInt(date.getUTCMonth()+1)+'-'+date.getUTCDate()+' '+date.getUTCHours()+':'+date.getUTCMinutes()+':'+date.getUTCSeconds();
+	$.ajax({ 
+      url: "/wxml/set_time.xml",
+      type: "Post", 
+      timeout: 8000,
+      cache: false,
+      datatype: "xml",
+      data: post_data, 
+      success: function(data, status) {
+
+      },
+      error: function(x, t, m){
+        if(t==="timeout"){
+
+        }  
+      }
+    })
+}
+login=parseInt(login)&0x0F;
+var lang,mod_sig,net_st=<% get_network_status();%>,sms_href,is_home,need_refresh=0,invalid_sim_poped=0;
+
+var clickHandler = (navigator.userAgent.match(/iPhone|iPad|iPod/) && ('ontouchstart' in document.documentElement) ? "touchstart" : "click");
+function bg_display(){
+	$('#main').height($(document).height()); 
+	$('body').height($(document).height()); 
+}
+
+var interval_timer,title_timer,locking=0,batt,batt_p;
+
+function open_page(url){
+//	$('.algin_center').hide();
+	$('.algin_center').load(url,function(response,status){
+	if (status=="success") {
+//		bg_display();
+		var res_to_login='top.window.open("http://'+location.hostname+'/login.htm","_self")';
+		if(response.indexOf(res_to_login)>-1){
+			top.location.href = 'login.htm';
+			return;
+		}
+		locking=0;
+		refresh_document();
+		load_mark(url);
+		if(url=='home.html') {invalid_sim_poped=0; is_home=1;}
+		else if(url=='update.html') is_home=2;
+		else if(url=="login_conn.htm") is_home=3;
+		else if(url=="pin.html") {invalid_sim_poped=0; is_home=4;}
+		else {
+			is_home=0;
+		}
+		if($(window).width()>800 && $('body').height()>$(window).height()){
+			$('#main').css('margin-left','17px');
+		}
+		else {
+			$('#main').css('margin-left','0');
+		}
+
+		if(is_home==1 && $(window).width()>800 && ($('body').height()+50 )<$(window).height()){
+			var margin_top= parseInt(($(window).height()-622)*0.4);
+			$('.algin_center').css('margin-top',margin_top+'px');
+		}
+		// else {
+		// 	$('.algin_center').css('margin-top','0');
+		// }
+
+
+		}
+	});
+}
+
+function show_batt_ind(lv,percent){
+var batt_html='';
+if(lv==0) batt_html='<span style="font-size:2.2em;color:#888;">&#248;</span>';
+else if(lv==1) batt_html='<span style="font-size:2.2em;color:#888">&#248;</span><span style="font-size:2.2em;color:#FFF;margin-left:-0.94637224em;">&#246;</span>';
+else if(lv==2) batt_html='<span style="font-size:2.2em;color:#888;">&#248;</span><span style="font-size:2.2em;color:#FFF;margin-left:-0.94637224em;">&#247;</span>';
+else batt_html='<span style="font-size:2.2em;color:#FFF;">&#248;</span>';
+if(percent!=undefined) {
+	if(isIE){
+		batt_html+=('<span id="batt_percent_ie">'+percent+'%</span>');
+	}
+	else{
+		batt_html+=('<span id="batt_percent">'+percent+'%</span>');	
+	}
+
+}
+$("#battery").html(batt_html);
+}
+
+$('#cspn').live(clickHandler,function(){
+	if($(this).html().indexOf('PIN')>-1 || $(this).html().indexOf('PUK')>-1){
+		open_page('pin.html');
+	}
+});
+
+function show_dsc(dsc_ver,pin,cspn,batt,percent){
+//&1 [uim] &2[batt] &4[sd]
+if(dsc_ver&0x01){
+	if(pin>1){
+		var temp='';
+		if(pin==2){temp='PIN Locked';}
+		if(pin==3){temp='PUK Locked';}
+		if(pin==4){temp='No UIM';}
+		$('#cspn').html(temp).css({'color':'red','cursor':'pointer'});
+	}
+	if(cspn==-1 || cspn=='Please Insert Card') $('#cspn').html('No SIM Card').css('color','red');
+	else if(pin==0 || pin==1 ||isNaN(pin)){
+		//normal
+		if(cspn.toLowerCase()=="invalid sim") {
+			cspn="Invalid SIM";
+			if(!invalid_sim_poped && (is_home==1 || is_home==4)){
+				invalid_sim_poped=1;
+				pop_result("Non Reliance 4G SIM,<br>please contact Reliance customer care.");
+			}
+		}
+		
+		if(cspn=="LTE") {
+			cspn="4G";
+			$('#cspn').html(cspn).css({'color':'#FFF','font-size':'1.4em','font-family':'Arial'});
+		}
+		else{
+			$('#cspn').html(cspn).css({'color':'#FFF','font-size':'1em','font-family':'dinregular'});
+		}
+	}
+
+}
+
+if(dsc_ver&0x02){
+var hi=batt>>>8;
+if(hi < 4) show_batt_ind(hi);
+else if(hi == 4) {
+  var lo=(batt&0x0C)/4;
+  if(lo==3) lo=0;
+  else lo=lo+1;
+//  console.log("v=%d,ind=%d",batt,lo);
+  show_batt_ind(lo,batt_p);
+
+ }
+}
+else{
+$("#battery").html('&nbsp;')
+}
+
+}
+
+function mod_sig_src(sig,op_mode){
+	var sig_html='';
+	var sig_mode='';
+	
+	if(op_mode=="WCDMA") sig_mode="&#194;";
+	else if(op_mode=="GSM")  sig_mode="&#193;";
+	else if(op_mode=="LTE") sig_mode="&#254;";
+
+	
+	if(sig==-1) sig=0;
+
+
+
+	// if(sig==0) sig_html='<span style="font-size:2.2em;color:#888;">&#253;</span>';
+	// else if(sig==1) sig_html='<span style="font-size:2.2em;color:#888;">&#253;</span><span style="font-size:2.2em;margin-left:-0.55em;">&#249;</span>';
+	// else if(sig==2) sig_html='<span style="font-size:2.2em;color:#888;">&#253;</span><span style="font-size:2.2em;margin-left:-0.55em;">&#250;</span>'
+	// else if(sig==3) sig_html='<span style="font-size:2.2em;color:#888;">&#253;</span><span style="font-size:2.2em;margin-left:-0.55em;">&#251;</span>'
+	// else if(sig==4) sig_html='<span style="font-size:2.2em;color:#888;">&#253;</span><span style="font-size:2.2em;margin-left:-0.55em;">&#252;</span>'
+	// else if(sig==5) sig_html='<span style="font-size:2.2em;">&#253;</span>'
+	// else if(sig==6) sig_html='<span style="font-size:2.2em;color:#F00;">&#255;</span>'
+	// else if(sig==7) sig_html='<span style="font-size:1.6em;color:#F00;">&#215;</span><span style="font-size:2.2em;margin-left:-0.55em;">&#338;</span>';
+
+	// if(!sig_mode.length){
+	// 	if(sig==0 || sig==5){
+	// 		sig_html+=('<span style="font-size:2.2em;margin-left:0;margin-right:0.45em">&nbsp;</span>');
+	// 	}
+	// 	else if(sig<7) sig_html+=('<span style="font-size:2.2em;">&nbsp;</span>');
+	// 	else sig_html=('<span style="font-size:1.6em;color:#F00;">&#215;</span>');
+	// }
+	// else{
+	// 	if(sig==0 || sig==5){
+	// 		sig_html+=('<span style="font-size:2.2em;margin-left:-0.55em;">' + sig_mode +'</span>');
+	// 	}
+	// 	else if(sig<7) sig_html+=('<span style="font-size:2.2em;margin-left:-1em;">' + sig_mode +'</span>');		
+	// }
+
+//sig=5;
+
+	if(sig==0) sig_html='<span style="font-size:2.2em;color:#888;">&#737;</span><span style="font-size:2.2em;color:#888;margin-left:-1.14em;">&#739;</span><span style="font-size:2.2em;color:#888;margin-left:-1.14em;">&#740;</span><span style="font-size:2.2em;color:#888;margin-left:-1.14em;">&#741;</span><span style="font-size:2.2em;color:#888;margin-left:-1.14em;">&#742;</span><span style="font-size:2.2em;color:#888;margin-left:-1.14em;">&#743;</span>';
+	else if(sig==1) sig_html='<span style="font-size:2.2em;color:#0073bb;">&#737;</span><span style="font-size:2.2em;color:#bf0a99;margin-left:-1.14em;">&#739;</span>';
+	else if(sig==2) sig_html='<span style="font-size:2.2em;color:#0073bb;">&#737;</span><span style="font-size:2.2em;color:#bf0a99;margin-left:-1.14em;">&#739;</span><span style="font-size:2.2em;color:#99cc00;margin-left:-1.14em;">&#740;</span>'
+	else if(sig==3) sig_html='<span style="font-size:2.2em;color:#0073bb;">&#737;</span><span style="font-size:2.2em;color:#bf0a99;margin-left:-1.14em;">&#739;</span><span style="font-size:2.2em;color:#99cc00;margin-left:-1.14em;">&#740;</span><span style="font-size:2.2em;color:#ff520d;margin-left:-1.14em;">&#741;</span>';
+	else if(sig==4) sig_html='<span style="font-size:2.2em;color:#0073bb;">&#737;</span><span style="font-size:2.2em;color:#bf0a99;margin-left:-1.14em;">&#739;</span><span style="font-size:2.2em;color:#99cc00;margin-left:-1.14em;">&#740;</span><span style="font-size:2.2em;color:#ff520d;margin-left:-1.14em;">&#741;</span><span style="font-size:2.2em;color:#ed008c;margin-left:-1.14em;">&#742;</span>';
+	else if(sig==5) sig_html='<span style="font-size:2.2em;color:#0073bb;">&#737;</span><span style="font-size:2.2em;color:#bf0a99;margin-left:-1.14em;">&#739;</span><span style="font-size:2.2em;color:#99cc00;margin-left:-1.14em;">&#740;</span><span style="font-size:2.2em;color:#ff520d;margin-left:-1.14em;">&#741;</span><span style="font-size:2.2em;color:#ed008c;margin-left:-1.14em;">&#742;</span><span style="font-size:2.2em;color:#00a4f0;margin-left:-1.14em;">&#743;</span>';
+	else if(sig==6) sig_html='<span style="font-size:2.2em;color:#888;">&#737;</span><span style="font-size:2.2em;color:#F00;margin-left:-1.18em;">&#738;</span>'
+	else if(sig==7) sig_html='<span style="font-size:1.6em;color:#F00;">&#215;</span><span style="font-size:2.2em;margin-left:-0.55em;">&#338;</span>';
+
+
+	// if(!sig_mode.length){
+	// 	if(sig==0 || sig==5){
+	// 		sig_html+=('<span style="font-size:2.2em;margin-left:0;margin-right:0.45em">&nbsp;</span>');
+	// 	}
+	// 	else if(sig<7) sig_html+=('<span style="font-size:2.2em;">&nbsp;</span>');
+	// 	else sig_html=('<span style="font-size:1.6em;color:#F00;">&#215;</span>');
+	// }
+	// else{
+	// 	if(sig==0 || sig==5){
+	// 		sig_html+=('<span style="font-size:2.2em;margin-left:-0.55em;">' + sig_mode +'</span>');
+	// 	}
+	// 	else if(sig<7) sig_html+=('<span style="font-size:2.2em;margin-left:-1em;">' + sig_mode +'</span>');		
+	// }
+
+	$('#signal').html(sig_html);
+
+	if(sig==1 || sig==6) $('#signal').css({"margin-right":"-0.9em"});
+	else if(sig==2) $('#signal').css({"margin-right":"-0.7em"});
+	else if(sig==3) $('#signal').css({"margin-right":"-0.2em"});
+	else if(sig==4) $('#signal').css({"margin-right":"0.1em"});
+	else if(sig==5 || sig==0) $('#signal').css({"margin-right":"0.4em"});
+
+}
+
+
+function pop_result(content){
+//	close_pop_diag();
+	var content = "<div class='pop_div'><div style='text-align:center;'>"+content+"</div></div>";
+  easyDialog.open({
+        container : {
+            header : 'Message',
+            content : content,
+            yesText : 'OK',
+            yesFn : close_pop_diag
+        },
+//        callback: refresh_sms,
+        fixed : false
+    });
+  return false;
+}
+
+
+
+function pop_login(){
+//	close_pop_diag();
+	var content = '';
+  easyDialog.open({
+        container : {
+            header : 'LOGIN',
+            content : content,
+            yesText : 'OK',
+            yesFn : close_pop_diag
+        },
+//        callback: refresh_sms,
+        fixed : false
+    });
+  return false;
+}
+
+
+
+function close_pop_diag(){
+easyDialog.close();
+//return false;
+}
+
+
+function pop_loading(txt){
+  var content = "<div class='pop_div'><div id='waiting'><img src='/img/loading.gif' style='height:2em;width:2em;'><span id='waiting_txt'>"+txt+"</span></div></div>";
+  easyDialog.open({
+        container : {
+            content : content
+        },
+        fixed : false
+  });
+}
+
+
+function to_dial(){
+	//||op_mode=="?"
+	if(op_mode=="NO SERVICE") {
+		pop_result("NO SERVICE");
+		return false;
+	}
+	var post_data,pop_content;
+	if(net_st==8){
+		post_data="conn=0";
+		pop_content='Connecting';
+	}
+	else{
+		post_data="conn=1";
+		pop_content='Disconnecting'; 
+	}
+
+	pop_loading(pop_content);
+	locking=1;
+	$.ajax({ 
+		url: '/wxml/conn.xml',
+		type: "Post", 
+		timeout: 20000,
+		cache: false,
+		datatype: "xml",
+		data: post_data, 
+		success: function(data, status) {
+		  locking=0;
+		  setTimeout(function(){easyDialog.close();},3000);
+		  
+		},
+		error: function(x, t, m){
+			locking=0;
+			easyDialog.close();
+		}
+	})
+}
+
+function refresh_login(){
+	if(login>=2){
+		$('#login_st').html('LOGOUT');
+		if((fota==89 || fota==99) && is_home!=2){
+			open_page('update.html');
+		}
+	}
+	else {
+		$('#login_st').html('LOGIN'); 
+		if(!is_home) open_page('home.html');
+		else if(is_home == 2 && fota < 50 ) open_page('home.html');
+	}
+}
+
+function to_404(){
+	need_refresh=4;
+	$('.algin_center').css({'height':'32em','text-align':'center','padding-top':'5em'}).html('<div style="font-size:1.2em;height:4em;"><p>Device disconnected. </p><p>Please check your connection.</p></div></div>');
+
+	$("#m_info").hide();
+
+
+}
+
+var Month = ['','JAN.','FEB.','MAR.','APR.','MAY.','JUN.','JUL.','AUG.','SEP.','OCT.','NOV.','DEC.'];
+var week_s = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+var week_l = ['SUNDAY','MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY'];
+var fota = 0,dsc;
+function refresh_title(){
+	if(locking) return true;
+	$.ajax({ 
+    url: '/mark_title.w.xml',
+    type: "Get", 
+    timeout: 8000,
+    cache: false,
+    datatype: "xml",
+    data: null, 
+    success: function(data, status) {
+		fota=parseInt($(data).find("fota").text());
+		if(fota==99) need_refresh = 0;
+
+    	if(need_refresh>3){
+    		location.reload(true);
+    		return;
+    	}
+    	lang=$(data).find("lang").text();
+    	if(!lang.length){
+    		if(need_refresh<5 && !locking) need_refresh++;
+    		if(need_refresh==4) to_404();
+    		return;
+    	}
+    	locking=0;
+    	$("#m_info").show();
+    	login = parseInt($(data).find("login").text())&0x0F;
+    	mod_sig=parseInt($(data).find("onex").text());
+    	op_mode=$(data).find("op_mode").text();
+    	if(mod_sig<0) mod_sig=0;
+		var sig_wifi=parseInt($(data).find("wifi").text());
+		var cspn=$(data).find("cspn").text();
+		dsc=parseInt($(data).find("dsc").text());
+		var pin=parseInt($(data).find("pin").text());
+		batt=parseInt($(data).find("batt").text());
+		batt_p=parseInt($(data).find("batt_p").text());
+		var rate=$(data).find("rate").text().split(',');
+		net_st=parseInt($(data).find("netstatus").text());
+		var roam=parseInt($(data).find("roam").text());
+		sd_st=parseInt($(data).find("sd_st").text());
+		$("#conn_time").html($(data).find("conn_time").text())
+		var up_rate = $(data).find("up_rate").text();
+		$("#up_rate").html(up_rate);
+		var dl_rate = $(data).find("dl_rate").text();
+		$("#dl_rate").html(dl_rate);
+		
+		if(up_rate!="0 bps") $("#traffic_01").attr("class","traffic_up");
+		else $("#traffic_01").attr("class","traffic_normal");
+		if(dl_rate!="0 bps") $("#traffic_02").attr("class","traffic_dl");
+		else $("#traffic_02").attr("class","traffic_normal");
+		
+		refresh_login();
+
+		if(fota==2 && net_st==9) {
+			$('#to_update').show();
+//			$('#to_update').parent().show();
+		}
+		else {
+			$('#to_update').hide();
+//			if($(window).width()<=800) $('#to_update').parent().hide();
+		};
+
+		// if(lang=='id') $('#lang').html('IND');
+		// else $('#lang').html('ENG');
+
+		mod_sig_src(mod_sig,op_mode);
+
+		if(sig_wifi==1) $('#wifi').attr('class','on');
+		else if(sig_wifi==0) $('#wifi').attr('class','off');
+		else $('#wifi').hide();
+
+		if(roam==1){
+			$('#roam').html('R');
+		}
+		else $('#roam').html('');
+		if(net_st==9) {
+			$("#a_conn_time").show();
+			$("#conn_sw").html("&#735;").attr("class","conn_on");
+			$("#conn_st").html("Connected");
+			$("#div_a_rate").show();
+		}
+		else {
+			$("#a_conn_time").hide();
+			$("#div_a_rate").hide();
+			$("#conn_sw").html("&#735;<span id=\"conn_off_x\">&#215;</span>").attr("class","conn_off");
+			$("#conn_st").html("Disconnected");
+
+		}
+		show_dsc(dsc,pin,cspn,batt,batt_p);
+
+		var date = new Date();
+		$('#hr_min').html(date.Format('hh')+':'+date.Format('mm'));
+//    	$('#date').html('<div>'+week_l[date.getDay()]+'</div><div>'+Month[date.getMonth()+1]+'&nbsp;'+date.Format('dd')+'</div>');
+    	$('#date').html('<div>'+week_l[date.getDay()]+'</div><div>'+date.Format('dd')+'&nbsp;'+Month[date.getMonth()+1]+'</div>');
+    },
+    error: function(x, t, m){
+      if (fota != 99)
+      {
+      	if(t==="timeout"){
+      		if(need_refresh<5 && !locking) need_refresh++;
+      		if(need_refresh==4)  to_404();
+      	}
+      	else if(t==="error"){
+      		if(need_refresh<5 && !locking) need_refresh++;
+      		if(need_refresh==4)  to_404();
+      	}
+      }
+    }
+    }) 
+}
+
+
+var isIE=0;
+$("document").ready(function(){
+if(navigator.userAgent.match(/iPhone|iPad|iPod/) && document.documentElement.scrollHeight <= document.documentElement.clientHeight) {  
+bodyTag = document.getElementsByTagName('body')[0];  
+bodyTag.style.height = document.documentElement.clientWidth / screen.width * screen.height + 'px';  
+setTimeout(function() {  
+window.scrollTo(0, 1)  
+}, 0); 
+}  
+
+var ua=navigator.userAgent.toLowerCase();
+if(ua.indexOf("windows nt 6.3")>-1 && ua.indexOf("rv:11.0")>-1){	//Win8 IE11
+	var zoom = Math.round(10000/detectZoom());
+	$(document.body).css("background-size",zoom+"% "+zoom +"%");
+}
+ 
+function detectZoom(){
+	var ratio=0;
+	ua=navigator.userAgent.toLowerCase();
+	if(window.devicePixelRatio !=undefined) {
+		ratio = window.devicePixelRatio;
+	}
+	else if(~ua.indexOf('msie')){
+		if(screen.deviceXDPI && screen.logicalXDPI){
+			ratio=screen.screen.deviceXDPI/screen.logicalXDPI;
+		}
+	}
+	else if(window.outerWidth !== undefined && window.innerWidth !== undefined){
+		ratio = window.outerWidth/window.innerWidth;
+	}
+	if(ratio){
+		ratio = Math.round(ratio*100);
+	}
+	return ratio;
+}
+
+$(window).resize(function(){
+var ua=navigator.userAgent.toLowerCase();
+if(ua.indexOf("windows nt 6.3")>-1 && ua.indexOf("rv:11.0")>-1){	//Win8 IE11
+	var zoom = Math.round(10000/detectZoom()); ;
+	$(document.body).css("background-size",zoom+"% "+zoom +"%");
+}
+
+if(!$('#div_content').length) return;
+  var c_height;
+  var s_height=$('div.aside-nav').height();
+  if($('#div_content').height() +100> s_height){
+    c_height = $('#div_content').height()+100;
+  }
+  else
+    c_height=s_height;
+  $('#main_content').height(c_height);
+  if($(document).width()>800) $('#aside').height(c_height);
+  else $('#aside').height($('.aside-nav').height());
+})
+
+
+if(!!window.ActiveXObject || "ActiveXObject" in window) isIE=1;
+else isIE=0;
+$.ajaxSetup ({
+	cache: false 
+});
+
+if(login>=2){
+	$('#login_st').html('LOGOUT');
+	open_page(target);
+}
+else {
+	$('#login_st').html('LOGIN'); 
+	open_page('home.html');
+}
+
+
+title_timer=setInterval(refresh_title,1000);
+
+
+$('.aside-nav li a').die().live('touchend', function(e) {
+//	e.preventDefault();
+	$(this).css({'background':"#E8E8E8","color":"#444"});
+});
+
+$('li.aside-submenu a').die().live('touchend', function(e) {
+//	e.preventDefault();
+	$(this).css({'background':"#F4F4F4","color":"#444"});
+});
+$('.to_home,.to_home_mobi').live('click',function(){
+open_page('home.html');
+});
+
+$('#logo').live('click',function(){
+	window.open("http://www.reliancenetconnect.co.in",'_blank');
+});
+
+$('.to_connect').live('click',function(){
+if($(window).width()>800 && navigator.userAgent.toLowerCase().indexOf('firefox')!=-1){
+	$('#main').css('margin-left','0');
+}
+	open_page('connection.html');
+});
+
+$('.to_status').live('click',function(){
+	open_page('status.html');
+});
+
+
+$('.to_about').live('click',function(){
+open_page('about.html');
+});
+
+
+$('.to_setting').live('click',function(){
+	open_page('setting.html');
+});
+
+$('#to_setting').live('click',function(){
+	open_page('setting.html');
+});
+
+$('#to_wifi').live('click',function(){
+   if(!(dsc&0x08)){
+    pop_submit_result('Wi-Fi option is not available.<br>Please contact your administrator!');
+    return false;
+  }
+  open_page('wifi.html');
+});
+
+
+$('#to_op').live('click',function(){
+  open_page('set_op.html');
+});
+
+$('#to_net').live('click',function(){
+  open_page('net.html');
+});
+
+$('#to_sys').live('click',function(){
+  open_page('sys.html');
+});
+
+$('#to_set_sd').live('click',function(){
+  if(!(dsc&0x04)){
+    pop_result('SD card option is not available.<br>Please contact your administrator!');
+    return false;
+  }
+  open_page('set_sd.html');
+});
+
+$('#to_set_mac').live('click',function(){
+  open_page('set_mac.html');
+});
+
+$('#to_set_url').live('click',function(){
+  open_page('set_url.html');
+});
+
+$('#to_set_ip').live('click',function(){
+  open_page('set_ip.html');
+});
+
+$('#to_set_port').live('click',function(){
+  open_page('set_port.html');
+});
+
+
+$('#to_pf').live('click',function(){
+  open_page('set_pf.html');
+});
+
+$('#to_ddns').live('click',function(){
+  open_page('ddns.html');
+});
+
+$('#to_wps').live('click',function(){
+  if(!(dsc&0x08)){
+    pop_submit_result('Wi-Fi option is not available.<br>Please contact your administrator!');
+    return false;
+  }
+  open_page('wps.html');
+});
+
+$('#to_dhcp').live('click',function(){
+  open_page('dhcp.html');
+});
+
+$('#to_wds').live('click',function(){
+  if(!(dsc&0x08)){
+    pop_submit_result('Wi-Fi option is not available.<br>Please contact your administrator!');
+    return false;
+  }
+  open_page('wds.html');
+});
+
+$('#to_set_pin').live('click',function(){
+  open_page('pin.html');
+});
+
+$('#to_ussd').live('click',function(){
+	open_page('ussd.html');
+});
+
+
+$("#conn_sw").live(clickHandler,function(){
+if(login>=2){
+		// if($(this).html()==" ") $(this).html("&#8192;");
+		// else $(this).html("&#8193;");
+	to_dial();
+}else{
+	open_page('login_conn.htm');		
+}	
+})
+
+
+$('.show_pwd').live(clickHandler,function(){
+    var lable0 = $(this).children("label:eq(0)");
+    var for_name=$(this).attr("for");
+    var change_text='<input type="';
+
+    var show_pwd_st=$(this).children('.show_pwd_st');
+
+    if(show_pwd_st.val()=='0'){
+      show_pwd_st.val('1');
+      lable0.html('&#239;') 
+      change_text +='text';
+    }
+    else{
+     show_pwd_st.val('0');
+      lable0.html('&#238;') 
+      change_text +='password';
+    }
+    var value= $('#'+for_name).val();
+    change_text += ('" id="'+for_name+'" name="'+for_name+'" title="PASSWORD" placeholder="PASSWORD" value="'+ '" maxLength="32"/> ');
+    $('#'+for_name).parent().html(change_text);
+    $('#'+for_name).val(value);
+  });
+
+
+
+
+$('#to_update,.to_update').live('click',function(){
+	if(net_st!=9) {
+		pop_result('Please connect network!');
+		return false;
+	}
+	else{
+		open_page('update.html');            
+	}
+	
+})
+
+$('.to_admin').live('click',function(){
+	open_page('sys.html');
+});
+
+$('.to_service').live('click',function(){
+if(net_st!=9){
+	pop_result('Please connect network!');
+	return false;
+}
+else window.open("http://myservices.relianceada.com/","_blank");
+});
+
+$('.to_land').live('click',function(){
+if(net_st!=9){
+	pop_result('Please connect network!');
+	return false;
+}
+else window.open("http://www.reliancenetconnect.co.in","_blank");
+});
+
+
+$('.to_twitter').live('click',function(){
+if(net_st!=9){
+	pop_result('Please connect network!');
+	return false;
+}
+else window.open("http://www.twitter.com","_blank");
+});
+
+
+
+
+$('.to_youtube').live('click',function(){
+if(net_st!=9){
+	pop_result('Please connect network!');
+	return false;
+}
+else window.open("http://www.youtube.com","_blank");
+});
+
+
+$('.to_facebook').live('click',function(){
+	if(net_st!=9){
+	pop_result('Please connect network!');
+	return false;
+}
+else window.open("http://www.facebook.com","_blank");
+});
+
+
+
+$('.to_sd').live('click',function(){
+  if(!(dsc&0x04)){
+    pop_result('SD card option is not available.<br>Please contact your administrator!');
+    return false;
+  }
+if(!sd_st){
+	pop_result('SD card not exist!');
+	return false;
+}
+else if(sd_st==2){
+	pop_result('You need to switch "<b>Storage Mode</b>" to "<b>Internet Storage</b> or <b>WiFi Storage</b>"<br> at page "<b>Storage Setting</b>"!');
+	return false;
+}
+var ismobile=navigator.userAgent.toLowerCase().match(/(ipad)|(iphone)|(ipod)|(android)|(webos)|(blackberry)|(iemobile)/i);
+if( ismobile ) {
+  top.window.open("/msd.html","_self"); 
+}
+else window.open('/sdcard.html','_self');
+});
+
+
+$('#to_login').live('click',function(){
+	if(login>=2){
+		$('#login_st').html('LOGIN');
+		$.ajax({ 
+		url: '/wxml/login_exit.xml',
+		type: "Post", 
+		timeout: 8000,
+		cache: false,
+		datatype: "xml",
+		data:  null, 
+		success: function(data, status) {
+
+		},
+		error: function(x, t, m){
+		if(t==="timeout"){
+
+		}  
+		}
+		})
+
+		$('.algin_center').load('home.html');
+//		bg_display();
+	}
+	else {
+		top.location.href="login.htm";
+	}
+});
+
+
+$('input[type="radio"]+label').live('click',function(){
+	if(!$(this).prev().attr('disabled')) $(this).prev().attr('checked','checked');
+});
+
+
+// function add_to_list(mac){
+// $('.b3 > .mac').each(function(index, element) {
+// if($(this).attr('disabled')) return false;
+// //if($(this).val().length==0 || $(this).val()==mac){
+// if($(this).val().length==0){
+//   $(this).val(mac);
+// 	$(this).focus();
+// 	return false;
+// }
+// });
+// }
+
+
+// function add_to_list1(mac){
+// $('.col3 > .mac1').each(function(index, element) {
+// if($(this).attr('disabled')) return false;
+// //if($(this).val().length==0 || $(this).val()==mac){
+// if($(this).val().length==0){
+//   $(this).val(mac);
+// 	$(this).focus();
+// 	return false;
+// }
+// });
+// }
+// $('#tbl_user tr').live('click',function(){
+//   var mac=$(this).children("td:eq(2)").html();
+//   if(mac) {
+//     add_to_list(mac);
+//   }
+// });
+
+// $('#tbl_user1 tr').live('click',function(){
+//   var mac=$(this).children("td:eq(2)").html();
+//   if(mac) {
+//     add_to_list1(mac);
+//   }
+// });
+
+});
+
+window.onbeforeunload=function(){
+	if(is_home==2 && (fota==89 || fota==99)){
+		return "Firmware is updating. Please stay on this page and keep device on."		
+	}
+
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+  <title>RELIANCE 4G</title>
+  <link rel="stylesheet" href="components.css">
+  <link rel="stylesheet" href="responsee.css">
+	<link href="favicon.ico" mce_href="favicon.ico" rel="bookmark" type="image/x-icon" />  
+	<link href="favicon.ico" mce_href="favicon.ico" rel="icon" type="image/x-icon" />  
+	<link href="favicon.ico" mce_href="favicon.ico" rel="shortcut icon" type="image/x-icon" />  
+  <script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+  <script type="text/javascript" src="jquery-ui.min.js"></script>    
+  <script type="text/javascript" src="modernizr.js"></script>
+  <script type="text/javascript" src="responsee.js"></script>
+  
+  <!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<![endif]-->
+
+
+<style>
+
+body{
+background:url(/img/bg.jpg);
+filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+-moz-background-size:100% 107%;
+background-size:100% 107%;
+color: white;
+background-attachment:fixed;
+}
+
+
+/*#login_head{height:8em;color:#FFF;}
+#smart_logo{display:inline-block;vertical-align:middle;font-size:3.8em;}
+#smart_text{display:inline-block;vertical-align:middle;font-size:2.4em;}
+#smart_4g{font-size:4.6em;vertical-align:middle;color:red;}
+#smart_lte{font-size:2.4em;vertical-align:middle;color:red;}
+#smart_live{text-align:center;margin-top:-1.6em;}*/
+@media screen and (max-width:960px) {
+body{
+background:url(/img/bg.jpg);
+filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+-moz-background-size:100% 107%;
+background-size:100% 107%;
+color: white;
+background-attachment:fixed;
+}
+/*#login_head{height:8em;color:#FFF;}
+#smart_logo{display:inline-block;vertical-align:middle;font-size:2.8em;}
+#smart_text{display:inline-block;vertical-align:middle;font-size:2em;}
+#smart_4g{font-size:3.6em;vertical-align:middle;color:red;}
+#smart_lte{font-size:2em;vertical-align:middle;color:red;}
+#smart_live{text-align:center;margin-top:-0.6em;}*/
+}
+
+@media screen and (max-width: 800px){
+form.customform input{margin-left: 0;width: 100%;}
+}
+
+@media screen and (max-width:480px) {
+/*#login_head{height:6em;color:#FFF;}
+#smart_logo{display:inline-block;vertical-align:middle;font-size:2.2em;}
+#smart_text{display:inline-block;vertical-align:middle;font-size:1.6em;}
+#smart_4g{font-size:3em;vertical-align:middle;color:red;}
+#smart_lte{font-size:2em;vertical-align:middle;color:red;}*/
+}
+
+#top_div{height: 100px;margin-bottom: 2em;}
+
+.logo_p{width:282px;height: 50px;background-repeat: no-repeat;display: inline-block;position: relative;}
+.logo{
+	background-image:url(img/rcom.png);  background-position: 0 0;-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;background-size: 100% 100%;;cursor: pointer; 
+}
+
+@media screen and (max-width:320px) {
+	.logo_p{width:230px;height:40px;background-repeat: no-repeat;display: inline-block;}
+}
+#btn_lang{text-align:right;cursor:pointer;}
+#error_info{text-align:center;color:#FAE;}
+#lte_4g{font-family: Arial;font-size: 1.3em; padding-left: 1.3em;padding-top: 0.2em;}
+</style>
+</head>
+<body class="size-960"  style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/bg.jpg', sizingMethod='scale'">
+<!--<div id="Layer1" style="position:absolute; width:100%; height:100%; z-index:-1">    
+<img src="login_801.png" height="100%" width="100%"/>    
+</div>-->
+
+
+
+
+
+  <!-- HEADER -->
+  <header>
+	
+  </header> 
+  <section>
+  <div class="line">
+	<div class="s-12 l-5 center" id="top_div">
+		<!-- <div class="s-12 l-12 center" id="login_head"> -->
+		<!--<span style="width:30%;display:inline-block;vertical-align:middle;text-align:right;font-size:4.8em;">&#201;&nbsp;</span>
+		<span style="width:66%;display:inline-block;vertical-align:middle;text-align:left;font-size:2.4em;">Smartfren</span>-->
+<!-- 		<span id="smart_logo" >&#201;&nbsp;</span>
+		<span id="smart_text">Smartfren</span>
+		<span id="smart_4g">&#243;&#244;</span><span id="smart_lte">&#245;</span>
+		<div id="smart_live">live smart</div>
+		<div id="btn_lang">
+    <span id='show_lang'>ENG</span><span>&nbsp;&#217;</span>
+    </div> -->
+		<span class="logo_p logo">
+			<span id="logo">&nbsp;</span>		
+		</span>
+		<div class="s-12 l-12 " id="lte_4g">
+		4G | LTE
+		</div>
+		<!-- </div> -->
+
+	</div>
+  </div>
+  
+
+  
+  
+	<div class="line" >
+	<div class="s-12 l-5 center" id="center_div">
+	<form class="customform" onsubmit="return return_false()">
+	<div class="margin">
+	<div class="s-12 l-3" style="vertical-align:middle;line-height:2.5em;color:white;">
+	<label> USERNAME</label>
+	</div>
+	<div class="s-12 l-9">
+	<input type="text" name="user" id="user" title="USERNAME" placeholder="USERNAME" value="" />
+	</div>
+	<div class="s-12 l-3" style="vertical-align:middle;line-height:2.5em;color:white;">
+	<label> PASSWORD</label>
+	</div>
+	<div class="s-12 l-9">
+	<input type="password" name="pwd" id="pwd" title="PASSWORD" placeholder="PASSWORD" value="" /> 
+	</div>
+	<div class="s-12 l-12 center" style="margin-bottom:0.4em;">
+	<p id="error_info"></p>
+	</div>
+	<div class="s-12 l-12">
+	<button id="login">STORAGE LOGIN</button>
+	</div>
+	</div>
+	</form>
+
+	<div class="s-12 l-12 center">
+	<p style="text-align:center;"></p>
+	</div>
+	</div>
+	</div>
+
+  </section>     
+
+<script type="text/javascript">
+function loadXMLDoc(url){
+  var xmlHttp=null;
+  if (window.XMLHttpRequest){
+    xmlHttp=new XMLHttpRequest();
+  }
+  else if (window.ActiveXObject){
+    xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  if (xmlHttp!=null)
+  {
+    xmlHttp.onreadystatechange=function()
+    {
+      if (xmlHttp.readyState==4){
+        window.location.reload(true);
+      }
+    }
+    xmlHttp.open("GET",url,true);
+    xmlHttp.setRequestHeader("If-Modified-Since","0");
+    xmlHttp.send(null);
+  }
+  else{
+    window.location.reload(true);
+  }
+}
+
+
+function disableCacheRefresh(){
+  loadXMLDoc("/mark_cache.w.xml");
+}
+
+
+if (typeof jQuery == 'undefined') { 
+  disableCacheRefresh();
+}
+
+function return_false(){
+  return false;
+}
+	function alignMiddle(){
+		var centerDiv=$('#center_div')[0];
+		var topDiv=$('#top_div')[0];
+		var parentHeight = window.screen.availHeight*0.35;
+		centerDiv.parentNode.style.height= parentHeight +'px';
+		var marginTopVal=(window.screen.availHeight-parentHeight-topDiv.clientHeight)/2;
+		topDiv.style.marginTop=marginTopVal+'px';
+		var ua=navigator.userAgent.toLowerCase();
+if(ua.indexOf("windows nt 6.3")>-1 && ua.indexOf("rv:11.0")>-1){	//Win8 IE11
+	var zoom = Math.round(10000/detectZoom()); ;
+	$(document.body).css("background-size",zoom+"% "+zoom +"%");
+}
+//		centerDiv.style.marginTop=marginTopVal+'px';
+
+	}
+	window.onresize=alignMiddle;
+	window.onload=function(){
+	if(navigator.userAgent.match(/iPhone|iPad|iPod/) && (document.documentElement.scrollHeight <= document.documentElement.clientHeight) ) {  
+		bodyTag = document.getElementsByTagName('body')[0];  
+		bodyTag.style.height = document.documentElement.clientWidth / screen.width * screen.height + 'px'; 
+		setTimeout(function() {  
+			window.scrollTo(0, 1)  
+		}, 0); 
+	}  
+	setTimeout(function() {  
+	window.scrollTo(0, 1)  
+	}, 0); 
+	alignMiddle();
+	$('#user').focus();
+	}
+
+var rand,lang;
+
+function update_language(){
+  $.ajax({ 
+  url: 'mark_lang.w.xml',
+  type: "Get", 
+  timeout: 8000,
+  cache: false,
+  datatype: "xml",
+//    data: { path:curr_path,page:curr_page,filter:'255'  }, 
+  success: function(data, status) {
+		lang=$(data).find("lang").text();
+		rand = $(data).find("rand").text();
+		if(lang=='id') $('#show_lang').html('IND');
+		else $('#show_lang').html('ENG');
+  },
+  error: function(x, t, m){
+    if(t==="timeout"){
+
+    }  
+  }
+  })
+}
+function detectZoom(){
+	var ratio=0;
+	ua=navigator.userAgent.toLowerCase();
+	if(window.devicePixelRatio !=undefined) {
+		ratio = window.devicePixelRatio;
+	}
+	else if(~ua.indexOf('msie')){
+		if(screen.deviceXDPI && screen.logicalXDPI){
+			ratio=screen.screen.deviceXDPI/screen.logicalXDPI;
+		}
+	}
+	else if(window.outerWidth !== undefined && window.innerWidth !== undefined){
+		ratio = window.outerWidth/window.innerWidth;
+	}
+	if(ratio){
+		ratio = Math.round(ratio*100);
+	}
+	return ratio;
+}
+
+$(window).resize(function(){
+var ua=navigator.userAgent.toLowerCase();
+if(ua.indexOf("windows nt 6.3")>-1 && ua.indexOf("rv:11.0")>-1){	//Win8 IE11
+	var zoom = Math.round(10000/detectZoom()); ;
+	$(document.body).css("background-size",zoom+"% "+zoom +"%");
+}
+
+});
+
+$(document).ready(function(){
+	var ua=navigator.userAgent.toLowerCase();
+if(ua.indexOf("windows nt 6.3")>-1 && ua.indexOf("rv:11.0")>-1){	//Win8 IE11
+	var zoom = Math.round(10000/detectZoom()); ;
+	$(document.body).css("background-size",zoom+"% "+zoom +"%");
+}
+	update_language();
+});
+
+
+$('#btn_lang').live('click',function(event){
+	event.preventDefault();
+	var sel_lang;
+	if(lang=='id') sel_lang='en';
+	else sel_lang='id';
+	$.ajax({ 
+    url: '/wxml/set_lang.xml',
+    type: "Post", 
+    timeout: 8000,
+    cache: false,
+    datatype: "xml",
+    data: { lang:sel_lang}, 
+    success: function(data, status) {
+			location.reload(true);
+    },
+    error: function(x, t, m){
+      if(t==="timeout"){
+
+      }  
+    }
+    })
+});
+function return_false(){
+  return false;
+}
+
+var lock_button=0;
+$('#login').live('click',function(event){
+	if(lock_button || $(this).attr("disabled")) {
+
+		return false;
+	}
+//	$(this).attr({disabled:"true",class:'button_gray'});
+	lock_button=1;
+	event.preventDefault();
+	var username = $('#user').val();
+	var password = hex_md5($("#pwd").val().toLowerCase());
+	var esc_rand = rand;
+		$.ajax({ 
+    url: '/wxml/rlogin.xml',
+    type: "Post", 
+    timeout: 8000,
+    cache: false,
+    datatype: "xml",
+    data: { Name:username,password:password,rand:esc_rand}, 
+    success: function(data, status) {
+			var result = parseInt($(data).find("check").text());
+			if(result==0 || result ==2 || result ==4) $('#user').focus();
+			else $('#pwd').focus();
+			if(result==4) {
+			update_language();
+			$('#error_info').html("login timeout,please retry");
+			}
+			else if(result==5) $('#error_info').html("hacking detected");
+			else if(result==0) $('#error_info').html("username & password error");
+			else if(result==1) $('#error_info').html("password error");
+			else if(result==2) $('#error_info').html("username error");
+			else if(result==3) {
+				var ismobile=navigator.userAgent.toLowerCase().match(/(ipad)|(iphone)|(ipod)|(android)|(webos)|(blackberry)|(iemobile)/i);
+				if( ismobile ) {
+				  top.location.href="/msd.html"; 
+				}
+				else top.location.href="/sdcard.html";
+			}
+			lock_button=0;
+    },
+    error: function(x, t, m){
+	lock_button=0;
+      if(t==="timeout"){
+		
+      }  
+    }
+    })
+
+
+/*
+	if($('#user').val()=='admin' && $('#pwd').val()=='admin'){
+		window.sessionStorage.login=1;
+		window.sessionStorage.tar="setting.html";
+		location.href="index.html"
+	}
+	else{
+		session_storage.login=0;
+	}
+*/
+
+});
+
+</script>
+
+
+
+  <!-- FOOTER -->
+  <footer class="line" >
+
+	  <div class="s-12 l-6 center" style="text-align:center;color:white;font-weight:100%;font-size:80%;">
+	  		<br>
+		<p>Customer Care:- 1800-3000-5555</p>
+		<br>
+		<p>Copyright &copy; 2016.  All Rights Reserved.</p>
+	  </div>
+
+ 
+  </footer>
+
+</body>
+</html>

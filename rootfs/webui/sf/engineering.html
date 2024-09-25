@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<title>RELIANCE 4G</title>
+	<link href="favicon.ico" mce_href="favicon.ico" rel="bookmark" type="image/x-icon" />  
+	<link href="favicon.ico" mce_href="favicon.ico" rel="icon" type="image/x-icon" />  
+	<link href="favicon.ico" mce_href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+  <link rel="stylesheet" href="responsee.css">
+
+  <script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+  <script type="text/javascript" src="jquery-ui.min.js"></script>
+  <script type="text/javascript" src="modernizr.js"></script>
+  <script type="text/javascript" src="responsee.js"></script>  
+
+<!--[if lt IE 9]>
+<script src="html5.js"></script>
+<script src="css3-mediaqueries.js"></script>
+<link rel="stylesheet" href="old_IE.css">
+<![endif]-->
+<style>
+body{
+background:url(/img/bg.jpg);
+filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+-moz-background-size:100% 100%;
+background-size:100% 100%;
+color: white;
+background-attachment:fixed;
+}
+.align_right{display: inline-block;}
+.algin_center{margin-top:1em;}
+
+.logo_p{width:282px;height: 50px;background-repeat: no-repeat;display: inline-block;position: relative;}
+.logo{
+	background-image:url(img/rcom.png);  background-position: 0 0;-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;background-size: 100% 100%;;cursor: pointer; 
+	filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+}
+#product_name{margin-top:0.4em;text-align: left;}
+
+.width_100{width:100%;font-size:1em;}
+@media screen and (min-width:801px) {
+#aside{height:43.2em;background:#F0F0F0;}
+#main_content{background:#ccc;color:#444;font-size:0.9em;height:48em;}
+#main_content h3{padding:1em;color:#444;}
+}
+
+
+@media screen and (max-width:800px) {
+#product_name{margin:0;margin:0.4em 0;text-align: center;}
+.width_100{width:100%;font-size: 1em;}
+#aside{background:#F0F0F0;}
+#main_content{margin-top:0.8em;padding-bottom:1em;background:#ccc;color:#444;font-size:0.8em;}
+#main_content h3{padding:0.4em;color:#444;}
+}
+
+@media screen and (max-width:600px) {
+body{
+background:url(/img/bg.jpg);
+filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+color: white;
+background-attachment:fixed;
+}
+
+.align_right{text-align: right;}
+/*.algin_center{margin-top:1em;margin-left:0;}*/
+#product_name{margin:0;margin:0.4em 0;text-align: center;}
+}
+
+@media screen and (max-width:340px) {
+	.logo_p{width:230px;height:40px;background-repeat: no-repeat;display: inline-block;}
+}
+#lte_4g{font-family: Arial;font-size: 1.3em; padding-left: 1.3em;padding-top: 0.2em;}
+</style>
+</head>
+<body class="size-960"  style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/bg.jpg', sizingMethod='scale';background-attachment:fixed;">
+<!--<div id="Layer1" style="position:absolute; width:100%; height:100%; z-index:-1">    
+<img src="login_801.png" height="100%" width="100%"/>    
+</div>-->
+<div id="main">
+    <header id="title">
+	<div class="line" >
+	<div class="s-12 l-12 ">
+		<span class="logo_p logo">
+			<span id="logo">&nbsp;</span>		
+		</span>
+	</div>
+	<div class="s-12 l-12 " id="lte_4g">
+		4G | LTE
+	</div>
+	</div>
+	</header>
+
+  <section class="algin_center" >
+<div class="line width_100" >
+<!-- ASIDE NAV -->
+<div class="s-12 l-2" id="aside">
+<div class="aside-nav" >
+  <ul>
+  <li class="active-item "><a href="javascript:;">Engineer Mode</a></li>
+  <li><a href="index.htm">Home</a></li>
+  </ul>
+</div>
+</div>
+<div class="s-12 l-10" id="main_content">
+<h3 style="">Engineer Mode</h3>
+<div class="line" style="padding:0em 0.6em;">
+<table >
+<thead>
+<tr align=left>
+<th colspan=4>Information</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width=25%>ULFREQ</td>
+<td width=75% id="ulfreq"></td>
+</tr>
+<tr>
+<td width=25%>ULBW</td>
+<td width=75% id="ulbw"></td>
+</tr>
+
+
+<tr>
+<td width=25%>EARFCN</td>
+<td width=75% id="earfcn"></td>
+</tr>
+
+<tr>
+<td width=25%>DLFREQ</td>
+<td width=75% id="dlfreq"></td>
+</tr>
+<tr>
+<td width=25%>DLBW</td>
+<td width=75% id="dlbw"></td>
+</tr>
+
+<tr>
+<td width=25%>BAND</td>
+<td width=75% id="band"></td>
+</tr>
+
+<tr>
+<td width=25%>OPERATION MODE</td>
+<td width=75% id="opt_mode"></td>
+</tr>
+
+<tr>
+<td width=25%>PLMN</td>
+<td width=75% id="plmn"></td>
+</tr>
+<tr>
+<td width=25%>CI</td>
+<td width=75% id="ci"></td>
+</tr>
+
+<tr>
+<td width=25%>PCI</td>
+<td width=75% id="pci"></td>
+</tr>
+<tr>
+<td width=25%>ECGI</td>
+<td width=75% id="ecgi"></td>
+</tr>
+<tr>
+<td width=25%>RSRP</td>
+<td width=75% id="rsrp"></td>
+</tr>
+<tr>
+<td width=25%>RSRQ</td>
+<td width=75% id="rsrq"></td>
+</tr>
+<tr>
+<td width=25%>SINR</td>
+<td width=75% id="sinr"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  </section>     
+
+<div class="line">
+  <div class="s-12 l-12" id="product_name">
+  	MobileRouter
+  </div>
+</div>
+
+  <!-- FOOTER -->
+  <footer class="line">
+
+	  <div class="s-12 l-6 center" style="text-align:center;color:white;font-weight:100%;font-size:80%;margin-top:0em;">
+		<p>Copyright &copy; 2016.  All Rights Reserved.</p>
+	  </div>
+
+ 
+  </footer>
+</div>
+<script type="text/javascript">
+$("document").ready(function(){
+$.ajaxSetup ({
+	cache: false //关闭AJAX相应的缓存
+});
+
+load_info();
+setInterval(load_info,1000);
+
+
+
+function load_info(){
+$.ajax({ 
+    url: '/mark_engineer.w.xml',
+    type: "Get", 
+    timeout: 8000,
+    cache: false,
+    datatype: "xml",
+    data: null, 
+    success: function(data, status) {
+    	var login=parseInt($(data).find("login").text())&0x0F;
+    	if(login<2){
+    		top.location.href="index.htm";
+    		return false;
+    	}
+		var freq=$(data).find("freq").text();
+		if(freq=='-1') freq=',,,,,,,';
+		freq=freq.split(',');
+		var cell=$(data).find("cell").text();
+		if(cell=='-1') cell=',,,,';
+		cell=cell.split(',');
+		var rssi=$(data).find("rssi").text();
+		if(rssi=='-1') rssi=',,,,';
+		rssi=rssi.split(',');
+
+
+		// freq="23600,5,23600,5,40";
+		// cell="46000,175942913,329";
+		// rssi="-110,-4,13";
+
+		$('#ulfreq').html(freq[0]);
+		$('#ulbw').html(freq[1]);
+		$('#dlfreq').html(freq[3]);
+		$('#dlbw').html(freq[4]);
+		$('#earfcn').html(freq[5]);
+		$('#band').html(freq[6]);
+		$('#opt_mode').html(freq[7]);
+
+		$('#plmn').html(cell[0]);
+		$('#ci').html(cell[1]);
+		$('#pci').html(cell[2]);
+		$('#ecgi').html(cell[3]);
+
+
+		$('#rsrp').html(rssi[0]);
+		$('#rsrq').html(rssi[1]);
+		$('#sinr').html(rssi[2]);
+
+
+	},
+    error: function(x, t, m){
+      if(t==="timeout"){
+
+      }
+      else if(t==="error"){
+
+      }  
+    }
+    }) 
+}
+
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<history>
+<connect><% stat_history_connect("0");%></connect>
+<connect><% stat_history_connect("1");%></connect>
+<connect><% stat_history_connect("2");%></connect>
+<connect><% stat_history_connect("3");%></connect>
+<connect><% stat_history_connect("4");%></connect>
+<connect><% stat_history_connect("5");%></connect>
+<connect><% stat_history_connect("6");%></connect>
+<connect><% stat_history_connect("7");%></connect>
+<connect><% stat_history_connect("8");%></connect>
+<connect><% stat_history_connect("9");%></connect>
+<connect><% stat_history_connect("10");%></connect>
+<connect><% stat_history_connect("11");%></connect>
+<connect><% stat_history_connect("12");%></connect>
+<connect><% stat_history_connect("13");%></connect>
+<connect><% stat_history_connect("14");%></connect>
+<connect><% stat_history_connect("15");%></connect>
+<connect><% stat_history_connect("16");%></connect>
+<connect><% stat_history_connect("17");%></connect>
+<connect><% stat_history_connect("18");%></connect>
+<connect><% stat_history_connect("19");%></connect>
+<t_connect><% stat_history_total_connect();%></t_connect>
+<month><% stat_history_month("0");%></month>
+<month><% stat_history_month("1");%></month>
+<month><% stat_history_month("2");%></month>
+<t_month><% stat_history_total_month();%></t_month>
+</history>

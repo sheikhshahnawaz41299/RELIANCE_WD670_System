@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Help</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+
+
+<style type="text/css">
+
+#to_top{position:fixed;bottom:30px;right:30px;border:1px solid #888;text-align:center;vertical-align:middle;background:#ccc;cursor:pointer;width:60px;height:60px;line-height:60px;background: #CCC; filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity: 0.8;opacity: 0.8;}
+#to_top:hover{color: red;background: #ddd;}
+
+table{border-spacing:0;border-collapse: collapse;}
+
+ .help01_01,.help01_03,.help01_07,.help01_14,.help01_16,.help01_18,.help01_21,.help01_23,.help01_26{
+    background: url(img/help01.png) no-repeat top left;
+}
+.help01_01{ background-position: 0 0; width: 86px; height: 135px; } 
+.help01_03{ background-position: 0 -185px; width: 344px; height: 175px; } 
+
+ .help01_05{
+    background: url(img/help05.png) no-repeat top left;
+    width: 400px;height: 160px;
+    background-position: 0 0;
+}
+
+.help01_07{ background-position: 0 -410px; width: 16px; height: 15px; display: inline-block;margin-left: 4px;margin-right: 4px;} 
+ .help01_08{
+    background: url(img/help08.png) no-repeat top left;
+    width: 286px;height: 538px;
+    background-position: 0 0;
+}
+ .help01_10{
+    background: url(img/help10.png) no-repeat top left;
+    width: 293px;height: 538px;
+    background-position: 0 0;
+}
+ .help01_12{
+    background: url(img/help12.png) no-repeat top left;
+    width: 332px;height: 538px;
+    background-position: 0 0;
+}
+.help01_14{ background-position: 0 -475px; width: 45px; height: 46px; display: inline-block;margin-left: 4px;margin-right: 4px} 
+.help01_16{ background-position: 0 -571px; width: 220px; height: 340px; } 
+.help01_18{ background-position: 0 -960px; width: 48px; height: 55px; display: inline-block;margin-left: 4px;margin-right: 4px} 
+.help01_21{ background-position: 0 -1065px; width: 59px; height: 56px; display: inline-block;margin-left: 4px;margin-right: 4px} 
+.help01_23{ background-position: 0 -1171px; width: 52px; height: 50px; display: inline-block;margin-left: 4px;margin-right: 4px} 
+.help01_26{ background-position: 0 -1271px; width: 385px; height: 259px; } 
+
+
+</style>
+
+<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="jquery.ztree.all-3.5.min.js"></script>
+<script type="text/javascript" src="jquery.ztree_toc.js"></script>
+
+</head>
+<body>
+<div id="to_top" onclick="scroll_top()">
+Top
+</div>
+
+
+<ul id="tree" class="ztree"></ul>
+
+
+
+<div  class="markdown-body">
+<h2>Logging In to the Management Page</h2>
+<p>Login in to the management page where you can set the parameters of <b>Reliance Wi-Pod 4G|LTE</b>.</p>
+<p><strong>Procedure:</strong></p>
+<ol>
+<li>Open a browser and enter <a href="http://192.168.1.1" title="http://192.168.1.1">http://192.168.1.1</a> or <a href="http://www.reliance.home" title="http://www.reliance.home">http://www.reliance.home</a> in the address bar.</li>
+<li>Press Enter Key to open the web management page.</li>
+<li>Click any place on web page, login window will pop-up. Enter the Username and Password and click Log In button.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> The default <strong>username</strong> and <strong>password</strong> of the web management page are admin and admin.</p>
+</blockquote>
+<h2>Connection</h2>
+<p>To use the <b>Reliance Wi-Pod 4G|LTE</b> to access the Internet, you must create a network profile or set the default network profile and operator's network.</p>
+<h3>Creating a Network Profile</h3>
+<p>You can access the internet with default profile; alternately, you can also create a new profile manually by following given steps.</p>
+<p><strong>Procedure:</strong></p>
+<ol>
+<li>Click Setting &gt; Network Setting.</li>
+<li>Click APN1 from APN drop list.</li>
+<li>Input the profile-associated parameters.</li>
+<li>Click Apply button.</li>
+</ol>
+<h3>Accessing the Internet Using the Cellular Data Network</h3>
+<p>Use the following method to connect the <b>Reliance Wi-Pod 4G|LTE</b> to the Internet.</p>
+<p><strong>Procedure:</strong></p>
+<ol>
+<li>Click Setting &gt; Network setting.</li>
+<li>
+Select Connect Mode
+<ul>
+<li>Auto</li>
+<li>Manual</li>
+</ul>
+</li>
+<li>Click APPLY button.</li>
+<li>Access the Internet.</li>
+</ol>
+<table>
+<thead>
+<tr>
+	<th>Option</th>
+	<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>Auto connection</td>
+	<td>Refresh the page and view the current network connection status.</td>
+</tr>
+<tr>
+	<td>Manual connection</td>
+	<td>a. Go to Connection page.<br>b.Click CONNECT button to setup a connection to the Internet.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note</strong>: The default <strong>Connect Mode</strong> is Auto.</p>
+</blockquote>
+<h3>Traffic Statistics</h3>
+<p>Traffic statistics function records the network traffic and duration of the current connection as well as that since you last restored the <b>Reliance Wi-Pod 4G|LTE</b> to its default settings.</p>
+<h4>Viewing Traffic Statistics</h4>
+<p>Traffic statistics provide the network connection duration and traffic generated.</p>
+<blockquote>
+<p><strong>Note:</strong> Traffic statistics are provided for your reference only. Accurate traffic records can be obtained from the bill provided by your operator.</p>
+</blockquote>
+<p><strong>Procedure:</strong></p>
+<ol>
+<li>Click CONNECTION in the Home page.</li>
+<li>View the traffic data.</li>
+</ol>
+<h4>Clearing Traffic Statistics</h4>
+<p>This section describes how to clear the recorded traffic statistics.</p>
+<p><strong>Procedure:</strong></p>
+<ol>
+<li>Click CONNECTION in the Home page.</li>
+<li>Click <strong>Clear History</strong> to clear the recorded traffic statistics.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> Volume statistics provided here are approximate. For accurate statistics and details of charges refer to your bills.</p>
+</blockquote>
+<h2>Setting</h2>
+<h3>Quick Setting</h3>
+<p>You can use Quick Setting to change Wi-Fi SSID, Security Mode, Wi-Fi Key and Login Password of <b>Reliance Wi-Pod 4G|LTE</b>.</p>
+<h4>Setting Wi-Fi SSID</h4>
+<p><strong>Procedure</strong></p>
+<ol>
+<li>Choose Setting &gt; Quick Setting.</li>
+<li>You will see the factory default SSID.</li>
+<li>Input new SSID and Click APPLY button.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> Wi-Fi will be restarted after setting success.</p>
+</blockquote>
+<h4>Setting Security Mode</h4>
+<p><strong>Procedure:</strong></p>
+<ol>
+<li>Choose Setting &gt; Quick Setting.</li>
+<li>
+Select Security Mode
+<ul>
+<li>Open</li>
+<li>Secure</li>
+</ul>
+</li>
+<li>Input the KEY if necessary, and you can click the &quot;Show Wi-Fi Key&quot; check box to display the Wi-Fi Key or not.</li>
+<li>Click APPLY button</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong></p>
+</blockquote>
+<ul>
+<li>If Open Mode is selected, the Wi-Fi Key will not be shown on the page</li>
+<li>Wi-Fi will be restarted after setting success.</li>
+</ul>
+<h4>Login Password</h4>
+<p>You can check Login Password here.</p>
+<p><strong>Procedure</strong></p>
+<ol>
+<li>Choose Setting &gt; Quick Setting.</li>
+<li>Select &quot;Show Password&quot; check box to display Login password.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong></p>
+</blockquote>
+<ul>
+<li>You can input new value in textbox and click Apply button to change Password.</li>
+<li>You will Log out at once after change password  successfully, and you have to Log in  the web management again with new password and old username.</li>
+</ul>
+<h3>Wi-Fi Setting</h3>
+<p>The  service  set  identifier  (SSID)  is  a  name  that  identifies  a  wireless  local  area  network  (WLAN).  A  wireless  client  (for  example,  a computer) can communicate with the <b>Reliance Wi-Pod 4G|LTE</b> properly only when they are using the same SSID. To ensure the WLAN security, do not use the default SSID. You can define an SSID as required.</p>
+<h4>Setting Wi-Fi SSID</h4>
+<p><strong>Procedure</strong></p>
+<ol>
+<li>Click Setting &gt; Wi-Fi Setting</li>
+<li>You will see the factory default SSID mentioned above on the device.</li>
+<li>Input new SSID and Click APPLY button.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> Wi-Fi will be restarted after setting success.</p>
+</blockquote>
+<h4>Setting Channel</h4>
+<p><strong>Procedure</strong></p>
+<ol>
+<li>Click Setting&gt; WIFI Setting.</li>
+<li>You will see the default Channel is Auto.</li>
+<li>Select the appropriate channel for your network from the list.</li>
+<li>Click APPLY button.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> Wi-Fi will be restarted after setting success.</p>
+</blockquote>
+<h4>Security Mode</h4>
+<p><strong>Procedure</strong></p>
+<ol>
+<li>Click Setting&gt; WIFI Setting.</li>
+<li>
+<p>The default Security mode value is WPA-PSK/WPA2-PSK.</p>
+<p>Other security mode introduction:</p>
+<table>
+<thead>
+<tr>
+	<th>Option</th>
+	<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>WEP</td>
+	<td>This  is  stands  for  Wired  Equivalent  Privacy,  and  support  ASCII,  you  can  input  5  or  13 characters.</td>
+</tr>
+<tr>
+	<td style="padding:0;"><div style="width:100%;border-bottom:1px solid #ccc;padding:6px 13px;">WPA-PSK</div><div style="width:100%;border-bottom:1px solid #ccc;padding:6px 13px;">WPA-PSK/<br>WPA2-PSK</div><div style="width:100%;padding:6px 13px;">WPA2-PSK</div></td>
+	<td>These three security modes are the encryption method with keys changing automatically.</td>
+</tr>
+<tr>
+	<td>WPA Option</td>
+	<td>You can select TKIP &amp; AES for WPA, and TKIP, AES &amp; TKIP+AES for WPA2.  You  can input at least 8 digits, 32 digits at most.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>The default Security mode value is WPA-PSK/WPA2-PSK.</p>
+</li>
+<li>Click APPLY button.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> Wi-Fi will be restarted after setting success.</p>
+</blockquote>
+<h4>Wi-Fi Module</h4>
+<p><strong>Procedure</strong></p>
+<ol>
+<li>Click Setting&gt; WIFI Setting.</li>
+<li>
+Set Wi-Fi Module.
+<ul>
+<li>Enable: to enable the Wi-Fi Module.</li>
+<li>Disable: to disable the Wi-Fi Module.	</li>
+</ul>
+</li>
+<li>Click Apply button.</li>
+</ol>
+<h4>SSID Broadcast</h4>
+<p>If the service set identifier (SSID) broadcast function is enabled, the  <b>Reliance Wi-Pod 4G|LTE</b>  broadcasts the SSID of the wireless local area 
+network (WLAN) facilitating clients' access to the WLAN. The disadvantage is that unauthorized clients can also access the WLAN. If the 
+SSID broadcast is disabled, the <b>Reliance Wi-Pod 4G|LTE</b> does not broadcast the SSID of the WLAN. So the SSID must be entered manually and 
+correctly from a client before the client accesses the WLAN. This improves the security of the WLAN.</p>
+<p><strong>Procedure</strong></p>
+<ol>
+<li>Click Setting &gt; WIFI Setting.</li>
+<li>
+Set SSID Broadcast.
+<ul>
+<li>Enable: to enable the SSID broadcast.</li>
+<li>Disable: to disable the SSID broadcast.</li>
+</ul>
+</li>
+<li>Click APPLY button.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> During the process of setting up the WLAN,you can set the SSID broadcast to Enable to facilitate the access from clients.After the WLAN is set up, set the SSID broadcast to Disable to improve the security of the WLAN.</p>
+</blockquote>
+<h4>Setting Max User</h4>
+<p><strong>Procedure</strong></p>
+<ol>
+<li>Click Setting&gt; WIFI Setting.</li>
+<li>You will see the default Max User is 31</li>
+<li>Select the appropriate user number for your network from the list.</li>
+<li>Click APPLY button.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> Wi-Fi will be restarted after setting success.</p>
+</blockquote>
+
+
+<!-- <h4>Setting Wi-Fi power save</h4>
+<p><b>Reliance Wi-Pod 4G|LTE</b> disable the WLAN when all the following conditions are met: The <b>Reliance Wi-Pod 4G|LTE</b> is powered by only the battery; the WLAN is enabled; no clients access the WLAN for a period of time; the idle time exceeds the defined value of Wi-Fi power save . To click power key on device then enable the WLAN.</p>
+
+<p><strong>Procedure</strong></p>
+<ol>
+<li>Click Setting&gt; WIFI Setting.</li>
+<li>You will see the default  Wi-Fi power save setting is off.</li>
+<li>Select the appropriate time from the list..</li>
+<li>Click APPLY button.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> Wi-Fi will be restarted after setting success.</p>
+</blockquote> -->
+
+<h3>Network Setting</h3>
+<p>You can use Network setting to set Connect Mode, Network mode, and Profile.</p>
+<h4>Connect Mode</h4>
+<ul>
+<li>Auto: <b>Reliance Wi-Pod 4G|LTE</b> will connect to network automatically after power on.</li>
+<li>Manual: You have to enter Home page on web management to click CONNECT button to connect with network manually.</li>
+</ul>
+<h4>Network Mode</h4>
+<p>It only support LTE network.</p>
+<h4>Profile</h4>
+<p>Default network setup parameters for <b>Reliance Wi-Pod 4G|LTE</b> are:</p>
+<ul>
+<li>User: rcomnet</li>
+<li>Name: </li>
+<li>Password: </li>
+<li>APN name: rcomnet</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> The APN can be created by user and the device will use the user and password that was set by user for internet connection.</p>
+</blockquote>
+
+
+<h4>DNS</h4>
+<ul>
+<li>Auto: DNS IP Address will be allocated automatically.</li>
+<li>Manual: You can input Primary DNS IP Address, and Second DNS IP Address.</li>
+</ul>
+<p>After changing any settings, please click APPLY button to save the settings.</p>
+
+<h4>Setting IPV4/IPV6</h4>
+<p><strong>Procedure</strong></p>
+<ol>
+<li>Click Setting&gt; Network Setting.</li>
+<li>You will see the default option is IPV4/IPV6</li>
+<li>Select the appropriate option from the list.</li>
+<li>Click APPLY button.</li>
+</ol>
+
+
+
+<h4>Setting the UPnP</h4>
+<p>The Universal Plug and Play (UPnP) service realizes intelligent connection between two UPnP devices using port forwarding. UPnP devices can obtain IP addresses automatically and access the Internet dynamically.</p>
+<p><strong>Procedure</strong></p>
+<ol>
+<li>Choose Setting &gt; Advance&gt; Network Settings &gt; UPnP </li>
+<li>
+Select:
+<ul>
+<li>Enable: to enable the UPnP service.</li>
+<li>Disable: to disable the UPnP service. </li>
+</ul>
+</li>
+<li>Click APPLY button.</li>
+</ol>
+<p><strong>Post requisites</strong></p>
+<p>A computer that runs the Windows XP operating system is used as an example to describe how to enable the UPnP service on a client.</p>
+<ol>
+<li>Choose Start &gt; Control Panel &gt; Add or Remove Programs &gt; Add/Remove Windows Components. </li>
+<li>Select Networking Services and click Details. </li>
+<li>Select UPnP User Interface to enable the UPnP service. </li>
+<li>Click OK.</li>
+</ol>
+
+<h4>PING FROM WAN</h4>
+<p>Enable this function, device can accept WAN ping packets, that is used to check whether device and WAN is connected.</p>
+<h4>ADMIN FROM WAN</h4>
+<p>Enable this function, device can be accessed through WAN to configuration management page.</p>
+<script type="text/javascript">
+var dsc=parseInt(<% get_version_dsc(); %>);
+if(dsc&0x02){
+  document.write("<h3>Roaming</h3>\
+<p>The <b>Reliance Wi-Pod 4G|LTE</b> supports to set National and International Roaming Mode.</p>\
+<p><strong>Procedure</strong></p>\
+<ol>\
+<li>Click Setting&gt; Roaming.</li>\
+<li>Choose Roaming International or National Mode.</li>\
+<li>Click APPLY button.</li>\
+</ol>");
+} 
+</script>
+<h3>Network Operators</h3>
+<p>The <b>Reliance Wi-Pod 4G|LTE</b> supports both automatic and manual network registration.</p>
+<p><strong>Procedure</strong></p>
+<ol>
+<li>Click Setting&gt; Network Operators.</li>
+<li>
+<ul>
+<li>Auto: <b>Reliance Wi-Pod 4G|LTE</b> searches for an available network and registers with the network automatically.</li>
+<li>Manual: You need to search for an available network and register with it manually.</li>
+</ul>
+</li>
+</ol>
+<h3>Admin Setting</h3>
+<p>You can use Admin setting to set Login Username and password, Login Time out, Reset Setting and Factory Default Setting.</p>
+<h4>Login Username and Password</h4>
+<p>Here you can get Login User name and Password. Select &quot;Show Password&quot; check box to display Login password.</p>
+<p>You can input new value in textbox and click APPLY button to change User name and Password.</p>
+<h4>Login Timeout</h4>
+<p>Here you can set the Login timeout, the default value is 5 Min  that means the management page will logout automatically in 5min if you don’t do anything. You have to login again if you want to set the parameters of <b>Reliance Wi-Pod 4G|LTE</b>.</p>
+<script type="text/javascript">
+var dsc=parseInt(<% get_version_dsc(); %>);
+if(dsc&0x02){
+  document.write("\
+<h4>Setting Device power save</h4>\
+<p><b>Reliance Wi-Pod 4G|LTE</b> disable the WLAN when all the following conditions are met: The <b>Reliance Wi-Pod 4G|LTE</b> is powered by only the battery; no clients access the WLAN for a period of time; no LTE data traffic for a period of time; the idle time exceeds the defined value of device power save . To click power key on device then enable the WLAN.</p>\
+<p><strong>Procedure</strong></p>\
+<ol>\
+<li>Click Setting&gt; Admin Setting.</li>\
+<li>You will see the default device power save setting is off</li>\
+<li>Select the appropriate time from the list.</li>\
+<li>Click APPLY button.</li>\
+</ol>\
+<blockquote>\
+<p><strong>Note:</strong> Wi-Fi will be restarted after setting success.</p>\
+</blockquote>");
+} 
+</script>
+<h4>Reset Setting</h4>
+<p>You can restore Admin Setting, Wi-Fi Setting and DHCP Setting to factory default settings. The function is same as Reset Button. </p>
+<h4>Factory Default Setting</h4>
+<p>After you restore the <b>Reliance Wi-Pod 4G|LTE</b> to its default settings, your personal information will be deleted, and parameters will be restored to factory default values.</p>
+
+
+
+<h3>Storage Setting</h3>
+<h4>Storage Username and Password</h4>
+<p>Here you can get Storage User name and Password. Select &quot;Show Password&quot; check box to display Storage password.
+You can input new value in textbox and click APPLY button to change User name and Password.</p>
+<h4>Storage Mode</h4>
+<ul>
+<li>Local Storage: SD card will set as USB drive and be access for local PC only.</li>
+<li>WiFi Storage: SD card can be access over WiFi.</li>
+<li>
+<p>Internet Storage: SD card can be access over Internet.</p>
+<p>Please refer to <a href="#10509" title="Access the WI-FI DISK over Internet">Access the WI-FI DISK over Internet</a> that including access of WI-FI DISK by Port Forwarding and DDNS over Internet introduction.</p>
+</li>
+</ul>
+<h3>Advance</h3>
+<h4>DHCP Settings</h4>
+<h4>Enabling the DHCP Server</h4>
+<p>If the Dynamic Host Configuration Protocol (DHCP) server is enabled, the <b>Reliance Wi-Pod 4G|LTE</b>allocates IP addresses to clients connect ed to it.</p>
+<p><strong>Context</strong></p>
+<ul>
+<li>Start IP address, End IP address, and DHCP lease time (s) are available to be set only when the DHCP server is enabled. </li>
+<li>After the DHCP server is enabled, enable the function to automatically obtain an IP address and a DNS server address from clients.</li>
+</ul>
+<p><strong>Procedure</strong></p>
+<ol>
+<li>Choose Setting &gt; Advance &gt; DHCP.</li>
+<li>In IP address, enter the IP address of the Mobile WiFi. </li>
+<li>In Subnet mask, enter the subnet mask of the Mobile WiFi.</li>
+<li>Select Enable to enable the DHCP server.</li>
+<li>In Start IP address, enter a start IP address.</li>
+<li>In End IP address, enter an end IP address.</li>
+<li>In DHCP lease time (s), enter a lease time.</li>
+<li>
+<p>Click APPLY button. </p>
+<blockquote>
+<p><strong>Note:</strong></p>
+</blockquote>
+<ul>
+<li>The start IP address must be smaller than the end IP address. </li>
+<li>The minimum range from the start IP address to the end IP address is an independent IP address.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example of DHCP Server Configuration</strong></p>
+<p>Enable the DHCP server, and then configure the clients in the local area network to obtain IP addresses in a specified network segment automatically.</p>
+<ol>
+<li>In IP address, enter an IP address. For example, 192.168.1.1.</li>
+<li>In Subnet mask, enter a subnet mask. For example, 255.255.255.0.</li>
+<li>Select Enable to enable the DHCP server.</li>
+<li>In Start IP address, enter a start IP address. For example, 192.168.1.100.</li>
+<li>In End IP address, enter an end IP address. For example, 192.168.1.200.</li>
+<li>In DHCP lease time (s), enter a lease time. For example, 28800.</li>
+<li>Click APPLY button</li>
+</ol>
+<h4>Disabling the DHCP Server</h4>
+<p>If the Dynamic Host Configuration Protocol (DHCP) server is disabled, the <b>Reliance Wi-Pod 4G|LTE</b>does not allocate IP addresses to clients connected to it and IP addresses must be entered from each client.</p>
+<p><strong>Procedure</strong></p>
+<ol>
+<li>Choose Setting &gt; Advance &gt; DHCP.</li>
+<li>Select Disable to disable the DHCP server.</li>
+<li>Click APPLY button.</li>
+</ol>
+<h4>Configuring DHCP Clients</h4>
+<p>If the Dynamic Host Configuration Protocol (DHCP) server is enabled, certain settings must be configured from clients.</p>
+<p><strong>Context</strong></p>
+<p>Configuration on a Windows XP operating system is used as an example.</p>
+<p><strong>Procedure</strong></p>
+<ol>
+<li>Choose Start &gt; Control Panel &gt; Network Connections &gt; Wireless Network Connection.</li>
+<li>Right-click the Network Connection icon and choose Properties.</li>
+<li>Select Internet Protocol (TCP/IP) and click Properties.</li>
+<li>In the Network Protocol (TCP/IP) Properties dialog box, select Obtain an IP address automatically and Obtain DNS server address automatically.</li>
+<li>Click OK button</li>
+</ol>
+<h3>PIN Setting</h3>
+<p>PIN Settings provides PIN security settings to prevent unauthorized use of the USIM card.</p>
+<h4>Turning On or Off PIN Verification</h4>
+<p>If PIN verification is turned on, you need to enter the PIN only when the  <b>Reliance Wi-Pod 4G|LTE</b>is turned on. If PIN verification is turned off, no PIN is required.</p>
+<p>Choose Settings &gt; Advance &gt; PIN setting you can enable or disable the PIN verification.</p>
+<p><strong>Context</strong></p>
+<ul>
+<li>If a PIN is required, enter the correct PIN. </li>
+<li>If you enter your PIN incorrectly three times consecutively, the USIM card is locked and you must enter the PIN unlock 
+key (PUK).</li>
+<li>If you enter the PUK incorrectly ten times consecutively, the USIM card is locked permanently. If you cannot enter the correct PIN or PUK, network-associated functions are unavailable. </li>
+<li>The PIN and the PUK are provided with the USIM card. If you did not receive them or forgot them, contact your service provider.</li>
+</ul>
+<p><strong>Procedure</strong></p>
+<ol>
+<li>Click Setting &gt; Advance &gt; PIN Setting.</li>
+<li>
+From PIN operation, select: 
+<ul>
+<li>Enable: to turn on PIN verification.</li>
+<li>Disable: to turn off PIN verification.</li>
+</ul>
+</li>
+<li>Enter the correct PIN.</li>
+<li>Click APPLY button.</li>
+</ol>
+<h4>Changing the PIN</h4>
+<p>If PIN verification is turned on, you can change the PIN.</p>
+<p><strong>Procedure</strong></p>
+<ol>
+<li>Click Setting &gt; Advance &gt; PIN Setting.</li>
+<li>From PIN operation, select Modify.</li>
+<li>Enter the current PIN.</li>
+<li>Enter a new PIN and confirm the PIN.</li>
+<li>Click Apply button.</li>
+</ol>
+<h3>MAC Filter</h3>
+<p>You can control and manage the clients that access the wireless local area network (WLAN) to improve the security performance of the 
+WLAN.</p>
+<ol>
+<li>Choose Settings &gt; Advance &gt; MAC Filter.</li>
+<li>
+From MAC Filter Mode to select a Media Access Control (MAC) filtering mode.
+<ul>
+<li>Disable: To disable the function of filtering MAC addresses.</li>
+<li>White list: If the MAC address of a client is listed in MAC address, the client is allowed to connect to the <b>Reliance Wi-Pod 4G|LTE</b> over the WLAN.</li>
+<li>Black list: If the MAC address of a client is listed in MAC Address, the client is prohibited from connection to the 
+<b>Reliance Wi-Pod 4G|LTE</b> over the WLAN.</li>
+</ul>
+</li>
+<li>Select the MAC addresses of the clients to be controlled from user list.</li>
+<li>Click Apply button.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> any filtering mode to be selected, please make sure yourself can through the filter.</p>
+</blockquote>
+<h3>IP Filter</h3>
+<p>The function to filter IP addresses in the wireless local area network (WLAN), it can be used to restrict the user access to  the specific 
+internet services.</p>
+<h4>Enable IP Filter</h4>
+<ol>
+<li>Choose Settings &gt; Advance &gt; IP Filter.</li>
+<li>Select the check box on the left of Enable IP Filter.</li>
+<li>Input the IP addresses that you want to restrict, such as: 115.239.210.26</li>
+<li>Click Apply button.</li>
+<li>Open a browser and enter the IP address that restricted (115.239.210.26) in the address bar. The page can not be opened.</li>
+</ol>
+<h4>Disable IP Filter</h4>
+<ol>
+<li>Choose Settings &gt;Setting&gt; IP Filter. </li>
+<li>Remove the check box checked of Enable IP Filter.</li>
+<li>Click Apply button.</li>
+<li>Open a browser and enter the IP address (115.239.210.26) in the address bar. The page can be access.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> Please clear the file cache on your browser setting after click Apply button, the ways please reference <a href="#10211" title=" the URL Filter introduction">the URL Filter introduction</a>.</p>
+</blockquote>
+<h3>URL Filter</h3>
+<p>The function to filter URL in the wireless local area network (WLAN), it can be used to restrict the user access to the specific internet services.</p>
+<blockquote>
+<p><strong>Note:</strong> Please input the domain that you want to filter, for example if you want to filter Google then you need to put www.google.com or google.com, other format URL cannot be filtered, like: http://www.google.com or https://www.google.com.</p>
+</blockquote>
+<h4>Enable URL Filter</h4>
+<ol>
+<li>Choose Settings &gt; Advance &gt; URL Filter.</li>
+<li>Select the check box on the left of Enable URL Filter.</li>
+<li>Input the URL that you want to restrict. Such as: <a href="http://www.google.com" title="www.google.com">www.google.com</a>.</li>
+<li>Click Apply button.</li>
+<li>Open a browser and enter the URL that restricted (www.google.com) in the address bar. The page can not be access.</li>
+</ol>
+<h4>Disable URL Filter</h4>
+<ol>
+<li>Choose Settings &gt; URL Filter.</li>
+<li>Remove the check box checked of Enable URL Filter.</li>
+<li>Click Apply button.</li>
+<li>Open a browser and enter the URL you want to open in the address bar. You can access the page.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> Please clear the file cache on your browser setting after click Apply button as follow ways.</p>
+</blockquote>
+<h4>Clear the file cache</h4>
+<ol>
+<li>
+<p>Clear cache with Command &quot;ipconfig /flushdns&quot; on DOS window. </p>
+<ul>
+<li>
+<p>Enter Start-&gt;Run from your desktop corner on the left</p>
+<div class="help01_01"></div>
+</li>
+<li>
+<p>Input &quot;cmd&quot; on the window pop-up</p>
+<div class="help01_03"></div>
+</li>
+<li>The DOS window will pop-up after Click &quot;OK&quot; button as follow, please input Command &quot;ipconfig /flushdns&quot; with Enter key to clear browser cache.</li>
+<div class="help01_05"></div>
+</ul>
+</li>
+<li>
+Clear cache on your browser, this way is different for different Browser, follow the example is with Google Chrome.
+<ul>
+<li>Open the Google Chrome, and find the icon<span class="help01_07" > </span>to select History item.</li>
+<div class="help01_08"></div>
+<li>Select &quot;Clear browsing data&quot; item on the follow window.</li>
+<div class="help01_10"></div>
+<li>Click the &quot;Clear browsing data&quot; button to clear your Browser data.</li>
+<div class="help01_12"></div>
+</ul>
+</li>
+</ol>
+<h3>Port Filter</h3>
+<p>The function of port filter in the wireless local area network (WLAN), it can be used to restrict the user access to the specific port services.</p>
+<h4>Enable Port Filter</h4>
+<ol>
+<li>Click Settings &gt; Advance &gt; Port Filter.</li>
+<li>Select the check box on the left of Enable Port Filter.</li>
+<li>Input the port number that you want to restrict, such as web service: 80</li>
+<li>Click APPLY button.</li>
+<li>Open a browser and enter a page in the address bar. You can not access the page.</li>
+</ol>
+<h4>Disable Port Filter</h4>
+<ol>
+<li>Click Settings &gt;Advance&gt; Port Filter.</li>
+<li>Remove the check box of Enable Port Filter.</li>
+<li>Click APPLY button.</li>
+<li>Open a browser and enter a page in the address bar. You can access the page.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> Please clear the file cache on your browser setting after click APPLY button, the ways please reference the <a href="#10211" title=" the URL Filter introduction">the URL Filter introduction</a>.</p>
+</blockquote>
+<h3>Port Forwarding</h3>
+<p>It allows remote computers (for example, computers on the Internet) to connect to a specific computer or service within a private local-area network.</p>
+<ol>
+<li>Choose Settings &gt; Advance &gt; Port Forward.</li>
+<li>Select the check box on the left of Enable Port Forward.</li>
+<li>
+<p>Select the user info from user list, that Host name and MAC address will add to port forwarding list, but you still have to input Config Name, Local and Wan port by manually. Or you can input all of info by manually.</p>
+<blockquote>
+<p><strong>Note:</strong> Local port can be repeated, WAN port cannot be repeated.</p>
+</blockquote>
+</li>
+<li>
+<p>Click APPLY button.</p>
+</li>
+<li>
+<p>Start the server on the device that added the port forwarding list.</p>
+<blockquote>
+<p><strong>Note:</strong> The server include Web server, ftp server, Web camera server etc.</p>
+</blockquote>
+</li>
+<li>
+<p>Access the device started server with the other terminal connected Internet through WAN IP address with WAN port to the device started server. Such as: http://183.42.114.82:8080</p>
+</li>
+<li>The server can be accessed successfully.</li>
+</ol>
+<h3>DDNS</h3>
+<p>It is a method of updating, in real time, a Domain Name System to point to a changing IP address on the Internet. This is used to provide a persistent domain name for a resource that may change location on the network.</p>
+<p>It will go into effect only when Port Forwarding function enabled.</p>
+<ol>
+<li>Choose Setting &gt; Advance &gt; DDNS.</li>
+<li>Select the check box on the left of Enable DDNS.</li>
+<li>Select one DDNS server from server list.</li>
+<li>Input Domain name, Username and Password matched with DDNS server.</li>
+<li>Click APPLY button.</li>
+<li>
+<p>Start the server on the device that added the port forwarding list.</p>
+<blockquote>
+<p><strong>Note:</strong> The server including Web server, ftp server, Web camera server etc.</p>
+</blockquote>
+</li>
+<li>Access the device started server with the other terminal connected Internet through Domain name with WAN port, such as: http://www. no-ip.com :8080.</li>
+<li>
+<p>The server can be accessed successfully.</p>
+<blockquote>
+<p><strong>Note:</strong></p>
+</blockquote>
+<ul>
+<li><b>Reliance Wi-Pod 4G|LTE</b> only support follow three DDNS server: no-ip.com; dyndns-ip.com; oray.com.</li>
+<li>Domain name, Username and Password have to be applied for in special organization by user.</li>
+<li>If DDNS function enabled, you can get the IP address in real time after click APPLY button.</li>
+</ul>
+</li>
+</ol>
+<h3>WPS</h3>
+<p>Wi-Fi Protected Setup(WPS) is a special way to connect WiFi,the AP and the client can automatically for security settings, you can simply press the button or enter the PIN.</p>
+<blockquote>
+<p><strong>Note:</strong>The function of WPS only support the WIFI Security Mode as follows: Disabled, WPA2-PSK, WPA-PSK/WPA2-PSK and only support the WPA Option as follows: AES, AES+TKIP.</p>
+</blockquote>
+<h3>WDS</h3>
+<p>Through the Wireless Distribution System (WDS) function, let <b>Reliance Wi-Pod 4G|LTE</b> can extend the expansion of wireless signal, the scope of more and more widely.</p>
+<blockquote>
+<p><strong>Note:</strong>Please make sure all devices (Main and Relay Router) work under the same wifi channel.</p>
+</blockquote>
+<p><strong>Procedure</strong></p>
+<ul>
+<li>
+<p><strong>For a Main Router.</strong></p>
+<ol>
+<li>Choose Setting &gt; Advance &gt; WDS.</li>
+<li>To Enable WDS, then click APPLY button.</li>
+<li>Click SEARCH button or manually to add Relay Router MAC , then click ADD button.</li>
+<li>Click RESTART WIFI button.</li>
+</ol>
+</li>
+<li>
+<p><strong>For a Relay Router.</strong></p>
+<ol>
+<li>Choose Setting &gt; Advance &gt; WDS.</li>
+<li>To Enable WDS, then click APPLY button.</li>
+<li>Click SEARCH button or manually to add Main Router MAC , then click ADD button.</li>
+<li>Click RESTART WIFI button.</li>
+<li>Choose Setting &gt; Advance &gt; DHCP</li>
+<li>To disable DHCP and set different IP address from Main Router</li>
+</ol>
+</li>
+</ul>
+<h3>Update</h3>
+<p>The <b>Reliance Wi-Pod 4G|LTE</b> supports online update.</p>
+<p><strong>Procedure</strong></p>
+<ol>
+<li>
+<p>Click UPDATE to enable the <b>Reliance Wi-Pod 4G|LTE</b> to automatically check for updates. </p>
+<blockquote>
+<p><strong>NOTE:</strong> During update, do not close the browser or disconnect the Mobile WiFi.</p>
+</blockquote>
+</li>
+<li>
+<p>Click Update Now to display the Downloading…dialog box showing the download progress. 
+After the download is completed, the Confirm dialog box is displayed, indicating that the system has been updated.</p>
+</li>
+<li>Click OK button. </li>
+</ol>
+<h2>Status</h2>
+<h3>Basic Status</h3>
+<p>You can see the info including Device Status and User List</p>
+<ul>
+<li>
+<p>Device Status</p>
+<ul>
+<li>Network Mode: Display the network mode, it only support LTE network.</li>
+<li>Network Status: Display connection status currently. Disconnected, Connected,or dormant.</li>
+<li>WI-FI Status: Display WI-FI status, Power On or Power Off.</li>
+</ul>
+<p>When it is connected, it will show Wan IP and DNS information here.</p>
+</li>
+<li>
+<p>User List</p>
+<p>Here will display the user info that connected to <b>Reliance Wi-Pod 4G|LTE</b> by Wi-Fi, that including Host name, IP address, and MAC address.</p>
+</li>
+</ul>
+<h3>Quick Setting</h3>
+<p>If you click Quick Setting on Home page, it will jump to Setting page. So please refer to <a href="#10201" title="Setting-&gt;Basic Setting introduction">Setting-&gt;Basic Setting introduction.</a></p>
+<h2>WIFI DISK</h2>
+<p>It allows the other wireless devices (such as mobile phone) can be connected to <b>Reliance Wi-Pod 4G|LTE</b> using Wi-Fi, and access to the SD card content.</p>
+<p>In order to make sure you enjoy this feature better, we recommend strongly you use it with Google Chrome, Fire fox, and Safari browser.</p>
+<p>The file format WIFI DISK supports</p>
+<table>
+<thead>
+<tr>
+	<th>File Items</th>
+	<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>Document</td>
+	<td>&quot;.doc&quot;,&quot; .txt&quot;,&quot;.ppt&quot;,&quot;.xls',&quot;pdf&quot;</td>
+</tr>
+<tr>
+	<td>Image</td>
+	<td>&quot;.jpg&quot;,&quot;.bmp&quot;,&quot;.png&quot;</td>
+</tr>
+<tr>
+	<td>Audio</td>
+	<td>&quot;.wav&quot;,&quot;mp3&quot;</td>
+</tr>
+<tr>
+	<td>Video</td>
+	<td>&quot;.avi&quot;,&quot;.mp4&quot;,&quot;.rmvb&quot;</td>
+</tr>
+<tr>
+	<td>Package</td>
+	<td>&quot;.rar&quot;,&quot;.zip&quot;</td>
+</tr>
+</tbody>
+</table>
+<h4>Upload File</h4>
+<p>You can upload file to SD card from computer or mobile phone.</p>
+<ol>
+<li>Click DISK on the Home page to enter WIFI DISK page.</li>
+<li>Press the Upload button.</li>
+<li>Select the file you want to upload to SD card.</li>
+<li>Press the Start button on the pop up window to start uploading the file.</li>
+<li>You can find the file in the corresponding directory.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong></p>
+</blockquote>
+<p>The file will be uploaded to the folder created automatically with named rule Year. Month in All Files directory if you are locating root directory or you are locating other directory now, such as: Document, Audio, Video, Image, or Package. </p>
+<h4>Download File</h4>
+<p>You can download file from SD card.</p>
+<ol>
+<li>Click DISK on the Home page to enter WIFI DISK page.</li>
+<li>Select the file you want to download.</li>
+<li>Press the down arrow on the right of the file selected to download it.</li>
+</ol>
+<h4>New Folder</h4>
+<p>To New a folder in SD card.</p>
+<ol>
+<li>Click DISK on the Home page to enter WIFI DISK page.</li>
+<li>Find New Folder button.</li>
+<li>Input the name of file, and move the mouse to other place.</li>
+<li>It will pop up to prompt &quot;New Folder Success!&quot;</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong>
+The new folder created will locate in the folder created automatically with named rule Year. Month in <strong>All Files</strong> root directory if you are locating other directory currently to new a folder, such as: Document, Audio, Video, Image, or Package.</p>
+</blockquote>
+<h4>Search the file</h4>
+<p>You can find the file you want to get quickly with this feature.</p>
+<ol>
+<li>Click DISK on the Home page to enter WIFI DISK page.</li>
+<li>Find the search Icon on the right of New Folder button.</li>
+<li>Input the file name in the textbox.</li>
+<li>Press Enter Key on PC to get the file you wanted.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong></p>
+</blockquote>
+<p>You can search the file with Fuzzy query rule. For example: </p>
+<ul>
+<li>Input the search condition in textbox with *.txt, then all .txt files will be displayed.</li>
+<li>Input the search condition in textbox with 1*23. To meet this combination rule records will be displayed. </li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong>  * code indicates one or more characters, and it can be placed anywhere in search condition.</p>
+</blockquote>
+<ul>
+<li>Input the search condition in textbox with 1?23. To meet this combination rule records will be displayed.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> &quot;?&quot;code indicates one character, and it can be placed anywhere in search condition.
+- Input the search condition in the textbox with keyword such as 1234, then all files that contain 1234 characters will be displayed.</p>
+</blockquote>
+<h4>Rename the File or Folder</h4>
+<p>To rename the file or folder you selected.</p>
+<ol>
+<li>Click DISK on the Home page to enter WIFI DISK page.</li>
+<li>Select the file or folder you want to rename.</li>
+<li>With the right key or go to the drop list on the right of file or folder to select Rename item to rename the file or folder.</li>
+</ol>
+<h4>Delete the File or Folder</h4>
+<p>To delete the file or folder you selected.</p>
+<ol>
+<li>Click DISK on the Home page to enter WIFI DISK page.</li>
+<li>Select the file or folder you want to delete.</li>
+<li>With the right key or go to the drop list on the right of file or folder to select Delete item to delete the file or folder.</li>
+</ol>
+<h4>Check the SD capacity status</h4>
+<p>To check your SD card capacity status currently.</p>
+<ol>
+<li>Click DISK on the Home page to enter WIFI DISK page.</li>
+<li>Click the System on the left button corner. It will pop up a window.</li>
+<li>It displays the SD System status including SD capacity and Free capacity.</li>
+</ol>
+<h4>Format SD Card</h4>
+<p>To format your SD card.</p>
+<ol>
+<li>Click DISK on the Home page to enter WIFI DISK page.</li>
+<li>Click the System on the left button corner. It will pop up a window.</li>
+<li>Click Format card button, it will pop up a Prompt window.</li>
+<li>Select &quot;OK&quot;to format SD card. Otherwise cancel the operation.</li>
+<li>It will prompt &quot;Format success&quot; if format SD card successfully.</li>
+</ol>
+<h2>Access the WIFI DISK on IOS and Android system device</h2>
+<blockquote>
+<p><strong>Note:</strong> Behavior depends upon the browser version used on IOS/Android.</p>
+</blockquote>
+<ol>
+<li>Connect the IOS/Android system device to the <b>Reliance Wi-Pod 4G|LTE</b> via WIFI.</li>
+<li>Input the <a href="http://192.168.1.1" title="http://192.168.1.1">http://192.168.1.1</a> or <a href="http://www.reliance.home" title="http://www.reliance.home">http://www.reliance.home</a> in the browser address bar go to web management page with default username and password both are admin.</li>
+<li>Click Wi-Fi Disk on the Home page to enter WIFI Disk page.</li>
+<li>Click <span class="help01_14"> </span> button on Home Page to display others directory.</li>
+<div class="help01_16"></div>
+</ol>
+<p><strong>The function introduction for WIFI DISK on IOS and Android system device</strong></p>
+<h3>Upload File</h3>
+<p>You can upload file to SD card from IOS and Android system device, and share the file to others user that connected to <b>Reliance Wi-Pod 4G|LTE</b> via Wi-Fi. </p>
+<ol>
+<li>Click Wi-Fi Disk icon on the Home page to enter Wi-Fi Disk page.</li>
+<li>Click &quot;Upload&quot; button on Home Page.</li>
+<li>Select the file you want to upload to SD card.</li>
+<li>Press the Start button on the pop up window to start uploading the file.</li>
+<li>You can find the file in the corresponding directory.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong></p>
+</blockquote>
+<ul>
+<li>The file will be uploaded to the folder created automatically with named rule Year. Month in <strong>All Files</strong> directory if you are locating root directory or you are locating other directory now, such as: Document, Audio, Video, Image, or Package. </li>
+<li>IOS7 system have two upload button that are Upload and Upload(mov).  Upload button only for uploading one picture file. Upload(mov) IOS7 for uploading Multiple Video or picture files. </li>
+</ul>
+<h3>Download File</h3>
+<p>You can download file from SD card.</p>
+<blockquote>
+<p><strong>Note:</strong></p>
+<p>Audio, video, document can not be downloaded, only online play On IOS and Android system device. </p>
+</blockquote>
+
+<p>Follow steps is for downloading picture on IOS and Android system device.</p>
+<ol>
+<li>Click Wi-Fi Disk icon on the Home page to enter Wi-Fi Disk page.</li>
+<li>Select the file you want to download.</li>
+<li>Open it and Slide your finger to down.</li>
+<li>Press and hold your finger on the picture.</li>
+<li>Select &quot;Save Image&quot; on the pop up window to save picture. </li>
+</ol>
+<h3>New Folder</h3>
+<p>To New a folder in SD card.</p>
+<ol>
+<li>Click Wi-Fi Disk icon on the Home page to enter Wi-Fi Disk page.</li>
+<li>Click <span class="help01_14"> </span> button on Home Page.</li>
+<li>Find <span class="help01_18"> </span>  button and click it.</li>
+<li>Input the name of file, and Click OK button to finish it.</li>
+<li>It will pop up to prompt &quot;New Folder Success!&quot;</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> </p>
+</blockquote>
+<p>The new folder created will locate in the folder created automatically with named rule Year. Month in <strong>All Files</strong> root directory if you are locating other directory currently to new a folder, such as: Document, Audio, Video, Image, or Package.</p>
+<h3>Search the file</h3>
+<p>You can find the file you want to get quickly with this feature.</p>
+<ol>
+<li>Click Wi-Fi Disk icon on the Home page to enter Wi-Fi Disk page.</li>
+<li>Click <span class="help01_14"> </span>  button on Home Page.</li>
+<li>Find  <span class="help01_21"> </span> button and click it.</li>
+<li>Input the file name in the textbox.</li>
+<li>Press Enter Key to get the file you wanted.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong></p>
+</blockquote>
+<p>You can search the file with Fuzzy query rule. For example: </p>
+<ul>
+<li>Input the search condition in textbox with *.txt, then all .txt files will be displayed.</li>
+<li>Input the search condition in textbox with 1*23. To meet this combination rule records will be displayed. </li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong>  * code indicates one or more characters, and it can be placed anywhere in search condition.</p>
+</blockquote>
+<ul>
+<li>Input the search condition in textbox with 1?23. To meet this combination rule records will be displayed.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> &quot;?&quot;code indicates one character, and it can be placed anywhere in search condition.</p>
+</blockquote>
+<ul>
+<li>Input the search condition in the textbox with keyword such as 1234, then all files that contain 1234 characters will be displayed.</li>
+</ul>
+<h3>Rename the File or Folder</h3>
+<p>To rename the file or folder you selected.</p>
+<ol>
+<li>Click Wi-Fi Disk icon on the Home page to enter Wi-Fi Disk page.</li>
+<li>Select the file or folder you want to rename.</li>
+<li>Slide your finger to the left.</li>
+<li>Input the new file name or folder name and press &quot;Yes&quot; button to finish it.</li>
+<li>It will pop up to prompt &quot;Rename Success!&quot;</li>
+</ol>
+<h3>Delete the File or Folder</h3>
+<p>To delete the file or folder you selected.</p>
+<ol>
+<li>Click Wi-Fi Disk icon on the Home page to enter Wi-Fi Disk page.</li>
+<li>Select the file or folder you want to delete.</li>
+<li>Slide your finger to the right.</li>
+<li>Press &quot;Yes&quot; button to delete the file or folder on the pop up window.</li>
+</ol>
+<h3>Check the SD capacity status</h3>
+<p>To check your SD card capacity status currently.</p>
+<ol>
+<li>Click Wi-Fi Disk icon on the Home page to enter Wi-Fi Disk page.</li>
+<li>Click <span class="help01_14"> </span> button on Home Page.</li>
+<li>Find <span class="help01_23"> </span>  button and click it.</li>
+<li>It displays the SD System status including SD capacity and Free capacity on pop up window.</li>
+</ol>
+<h3>Format SD Card</h3>
+<p>To format your SD card.</p>
+<ol>
+<li>Click Wi-Fi Disk icon on the Home page to enter Wi-Fi Disk page.</li>
+<li>Click <span class="help01_14"> </span> button on Home Page.</li>
+<li>Find  <span class="help01_23"> </span> button and click it.</li>
+<li>Click Format card button, it will pop up a Prompt window.</li>
+<li>Select &quot;Yes&quot;to format SD card. Otherwise cancel the operation.</li>
+<li>It will prompt &quot;Format success&quot; if format SD card successfully.</li>
+</ol>
+<h3>Access the WI-FI DISK over Internet</h3>
+<h4>The introduction for WI-FI DISK by Port Forwarding</h4>
+<ol>
+<li>Connect your computer to the <b>Reliance Wi-Pod 4G|LTE</b> via USB port or Wi-Fi.</li>
+<li>Choose Setting&gt;Storage Setting&gt;Storage Mode&gt;Internet Storage.</li>
+<li>Click APPLY button, Wan IP Address will be shown on page.</li>
+<!-- <li>Choose Setting &gt; Network Setting &gt; Admin from WAN &gt; Enable &gt; APPLY</li> -->
+<li>Connect your computer or mobile device to Internet.</li>
+<li>Input Wan IP Address in the browser address bar and go to WIFI-DISK page with default username and password both are &quot;sdcard&quot;.</li>
+</ol>
+<h4>The function introduction for WI-FI DISK by DDNS</h4>
+<ol>
+<li>Connect your computer or mobile device to the <b>Reliance Wi-Pod 4G|LTE</b> via USB port or Wi-Fi.</li>
+<li>Choose Setting &gt; Storage Setting &gt; Storage Mode &gt; Internet Storage.</li>
+<li>Click APPLY button, Wan IP Address will be shown on page.</li>
+<!-- <li>Go to Setting &gt; Network Setting &gt; Admin from WAN &gt; Enable &gt; APPLY</li> -->
+<li>Go to Setting &gt; Advance &gt; DDNS to set your domain name. Please refer to Setting&gt;DDNS introduction.</li>
+<li>Connect your computer or mobile device to Internet.</li>
+<li>Input your domain name in the browser address bar and go to WIFI-DISK page with default username and password both are &quot;sdcard&quot;.</li>
+</ol>
+
+
+
+<!-- <h2>My smartfren</h2>
+<p>It will allow the device to open and enter the MY SMARTFREN Web service.</p>
+<p>User can see their account information, purchasing data package and etc through the MY SMARTFREN Web service.</p> -->
+
+<h2>HOME PAGE</h2>
+<p>Click the icon HOME PAGE on the WEB UI, it will open <a href="http://www.reliancenetconnect.co.in" target="_blank">Reliance home page</a></p>
+
+<h2>MY SERVICES</h2>
+<p>Click the icon MY SERVICE on the WEB UI, it will open the URL <a href="http://myservices.relianceada.com" target="_blank">http://myservices.relianceada.com</a></p>
+
+
+<h2>About</h2>
+<ul>
+<li>
+Device: Here you can get the info for software, hardware as follow.
+<ul>
+<li>Web UI Version</li>
+<li>Software Version</li>
+<li>Hardware Version</li>
+<li>IMEI</li>
+<li>Mac Address</li>
+<li>IMSI</li>
+</ul>
+</li>
+<li>Help: it will provide the guide for user how to use this software.</li>
+</ul>
+<h2>FAQs</h2>
+<h3>Clients Cannot Access the Internet Properly</h3>
+<p><strong>Procedure:</strong></p>
+<ol>
+<li>Check that clients are connected to the <b>Reliance Wi-Pod 4G|LTE</b> properly.</li>
+<li>Check that the <b>Reliance Wi-Pod 4G|LTE</b> is powered on properly.</li>
+<li>Check that the <b>Reliance Wi-Pod 4G|LTE</b>  is in a location covered by communication networks and that the signal strength is strong.</li>
+<li>When the <b>Reliance Wi-Pod 4G|LTE</b> is used for Internet access, the Point-to-Point Protocol (PPP) user name and password must be set correctly. Check that the PPP user name and password are correct. For details, see <a href="#10101" title="Creating a Network Profile">Creating a Network Profile</a>.</li>
+<li>If the Dynamic Host Configuration Protocol (DHCP) service is not enabled and the clients are set to obtain IP addresses dynamically, the clients cannot access the Internet. In this case, enable the DHCP service. For details, see <a href="#1040701" title="DHCP Settings">DHCP Settings</a>.</li>
+<li>Check that the network adapters of the clients are working properly.</li>
+<li>Contact your service provider if the problem persists.</li>
+</ol>
+<h3>Clients Cannot Access the WLAN Properly</h3>
+<p><strong>Procedure:</strong></p>
+<ol>
+<li>Check whether there are potential interference sources or shielding objects near the <b>Reliance Wi-Pod 4G|LTE</b>. If any, adjust the placement of the <b>Reliance Wi-Pod 4G|LTE</b></li>
+<li>Check and record the settings of the following parameters on the clients and the <b>Reliance Wi-Pod 4G|LTE</b>: SSID, Encryption mode, and security key. The encryption mode and the security key on the clients must match those set on the <b>Reliance Wi-Pod 4G|LTE</b>. Otherwise, change the setting on the clients</li>
+<li>If the Media Access Control (MAC) address filtering in the wireless local area network (WLAN) is enabled on <b>Reliance Wi-Pod 4G|LTE</b>, check that the MAC addresses of the clients are not in the Black list. For details, see <a href="#10209" title="MAC Filter"> Settings &gt; Advance &gt; MAC Filter</a>.</li>
+</ol>
+<h3>Login IP Address for the Management Page Is Forgotten</h3>
+<p><strong>Procedure:</strong></p>
+<ol>
+<li>Restore the default settings.</li>
+<li>Enter the following default login IP address: 192.168.1.1.</li>
+</ol>
+<h3>Login username and password is forgotten</h3>
+<ol>
+<li>Long press Reset button for 3 seconds to restore the default setting</li>
+<li>Enter the default username and password both are admin to login web management.</li>
+</ol>
+<h3>Wi-Fi Key Is Forgotten</h3>
+<ul>
+<li>Log in to the management page and obtain the current Wi-Fi key. For details, see Setting the WLAN Key.</li>
+<li>Long press Reset button for 3 seconds to restore the default settings. Check the relevant label on the <b>Reliance Wi-Pod 4G|LTE</b>to obtain the default WI-Fi key.</li>
+</ul>
+<h3>Multi-Network IP Address Conflict Occurs</h3>
+<p>When multiple types of Internet connections are used simultaneously on the client, such as physical network adapter and Wi-Fi, inserting the <strong><b>Reliance Wi-Pod 4G|LTE</b></strong> into the client may result in IP address conflict across multiple networks.
+<strong>Solution:</strong> Disable other network devices or disconnect other Internet connections from the client, and then restart <strong><b>Reliance Wi-Pod 4G|LTE</b></strong>.</p>
+<h3><b>Reliance Wi-Pod 4G|LTE</b>'s Data Services Are Blocked by Some Antivirus Software</h3>
+<p>Some antivirus software (for example, Bitdefender 2010) will block the <b>Reliance Wi-Pod 4G|LTE</b>'s RNDIS port.</p>
+<p><strong>Solution:</strong> Upgrade the relevant antivirus software to its latest version. If the problem persists, disable the software's firewall. </p>
+<h3>What Can I Do If the Network Connection Is Frequently Interrupted?</h3>
+<p><strong>Procedure:</strong></p>
+<ol>
+<li>Check the network signal strength. If the signal is weak, move the <b>Reliance Wi-Pod 4G|LTE</b>somewhere with better reception. </li>
+<li>Visit other websites to check whether the issue lies within a particular site.</li>
+<li>Close all other applications that require network connections. </li>
+<li>Contact your Internet service provider if the problem persists. </li>
+</ol>
+<h3>What Can I Do If I Cannot Open Web Pages After a Network Connection Is Set Up?</h3>
+<p><strong>Procedure:</strong></p>
+<ol>
+<li>Re-set up a dial-up Internet connection.</li>
+<li>Check that the computer is not infected with viruses. </li>
+<li>Check that the APN user name and password in the profile management settings are correct. For details, contact your Internet service provider.</li>
+<li>Check that network connection has not been blocked by a firewall.</li>
+<li>Restart your computer, and re-set up a dial-up Internet connection.</li>
+</ol>
+<h3>What Can I Do If the Icons That Indicate No Signals and No Service Are Displayed?</h3>
+<p><strong>Procedure:</strong></p>
+<ol>
+<li>Check that the <b>Reliance Wi-Pod 4G|LTE</b>is in an area with good reception. For details, contact your Internet service provider.</li>
+<li>Check that you have subscribed to network services for your USIM card, and that there is no outstanding balance. For details, contact your Internet service provider.</li>
+</ol>
+<h3>What Can I Do If the Network Access Rate Is Low?</h3>
+<p><strong>Procedure:</strong></p>
+<ol>
+<li>Check that the <b>Reliance Wi-Pod 4G|LTE</b>is in an area with good reception. For details, contact your Internet service provider.</li>
+<li>Check the network standard used by the Mobile WiFi. The available network access rate varies by the network standard. For details, contact your Internet service provider.</li>
+</ol>
+<h3>Cannot login Web management Page</h3>
+<ul>
+<li>Disconnect other network connections, such as an Ethernet or Wireless Fidelity (Wi-Fi) connection.</li>
+<li>Clear the cookies and caches of IE browsers.</li>
+<li>Close all IE browsers and Open again.</li>
+<li>Check the name and password of administrator is correct.</li>
+<li>Remove and then insert the <b>Reliance Wi-Pod 4G|LTE</b>, or restart the computer.</li>
+</ul>
+<h3>The file display 0 B after finish uploading on some Android device</h3>
+<p>If you find the file name change to follow format with % 20 automatically, and the file size is 0 B on some Android device.</p>
+<p><strong>For example:</strong> the original file name is &quot;IMG 20130219 135238.jpg&quot;,</p>
+<p>It is changed the file named &quot;IMG%2020130219%20135238.jpg&quot; after finish uploading to WIFI Disk.</p>
+<blockquote>
+<p><strong>Note:</strong> it usually occur in the file name with the space.
+<strong>Solution:</strong> Please change the file name without the space, and try to upload again.</p>
+<div class="help01_26"> </div>
+</blockquote>
+
+</div>
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
+
+
+
+<script type="text/javascript">
+function display_top_button(){
+  var top = document.body.scrollTop | document.documentElement.scrollTop;
+  if(top>500){
+    document.getElementById('to_top').style.display="";
+  }
+  else document.getElementById('to_top').style.display="none";
+}
+
+window.onscroll = function(){ 
+  display_top_button();
+}
+
+
+function scroll_top(){
+  document.body.scrollTop=0;
+  document.documentElement.scrollTop=0;
+}
+
+
+
+
+$(document).ready(function(){
+  display_top_button();
+$('#tree').ztree_toc({
+  is_auto_number:true,
+  documment_selector:'.markdown-body',
+  ztreeStyle: {
+    width:'100%'
+  },
+  _header_nodes: [{ id:1, pId:0, name:"Help Index",open:true}],
+  debug: false
+});
+location.hash="";
+});
+
+
+
+</script>

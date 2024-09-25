@@ -1,0 +1,170 @@
+<style>
+#center_div{margin-top: 200px;}
+@media screen and (max-width: 800px){
+form.customform input{margin-left: 0;width: 100%;}
+#center_div{margin-top: 0;}
+}
+
+#btn_lang{text-align:right;cursor:pointer;}
+#error_info{text-align:center;color:#FAE;}
+</style>
+
+
+  
+
+  
+  
+	<div class="line" >
+	<div class="s-12 l-5 center" id="center_div">
+	<form class="customform" onsubmit="return return_false()">
+	<div class="margin">
+	<div class="s-12 l-3" style="vertical-align:middle;line-height:2.5em;color:white;">
+	<label> USERNAME</label>
+	</div>
+	<div class="s-12 l-9">
+	<input type="text" name="user" id="user" title="USERNAME" placeholder="USERNAME" value="" />
+	</div>
+	<div class="s-12 l-3" style="vertical-align:middle;line-height:2.5em;color:white;">
+	<label> PASSWORD</label>
+	</div>
+	<div class="s-12 l-9">
+	<input type="password" name="pwd" id="pwd" title="PASSWORD" placeholder="PASSWORD" value="" /> 
+	</div>
+	<div class="s-12 l-12 center" style="margin-bottom:0.4em;">
+	<p id="error_info"></p>
+	</div>
+	<div class="s-12 l-12">
+	<button id="login">LOGIN</button>
+	</div>
+	</div>
+	</form>
+
+	<div class="s-12 l-12 center">
+	<p style="text-align:center;"></p>
+	</div>
+	</div>
+	</div>
+
+   
+<script type="text/javascript">
+
+
+var rand,lang;
+
+function update_language(){
+  $.ajax({ 
+  url: 'mark_lang.w.xml',
+  type: "Get", 
+  timeout: 8000,
+  cache: false,
+  datatype: "xml",
+//    data: { path:curr_path,page:curr_page,filter:'255'  }, 
+  success: function(data, status) {
+		lang=$(data).find("lang").text();
+		rand = $(data).find("rand").text();
+		if(lang=='id') $('#show_lang').html('IND');
+		else $('#show_lang').html('ENG');
+  },
+  error: function(x, t, m){
+    if(t==="timeout"){
+
+    }  
+  }
+  })
+}
+
+
+$(document).ready(function(){
+	$("#user").focus();
+	update_language();
+});
+
+$('#btn_lang').die().live('click',function(event){
+	event.preventDefault();
+	var sel_lang;
+	if(lang=='id') sel_lang='en';
+	else sel_lang='id';
+	$.ajax({ 
+    url: '/wxml/set_lang.xml',
+    type: "Post", 
+    timeout: 8000,
+    cache: false,
+    datatype: "xml",
+    data: { lang:sel_lang}, 
+    success: function(data, status) {
+			location.reload(true);
+    },
+    error: function(x, t, m){
+      if(t==="timeout"){
+
+      }  
+    }
+    })
+});
+function return_false(){
+  return false;
+}
+
+var lock_button=0;
+$('#login').die().live('click',function(event){
+	if(lock_button || $(this).attr("disabled")) {
+
+		return false;
+	}
+//	$(this).attr({disabled:"true",class:'button_gray'});
+	lock_button=1;
+	event.preventDefault();
+	var username = $('#user').val();
+	var password = hex_md5(rand+$("#pwd").val().toLowerCase());
+	var esc_rand = rand;
+		$.ajax({ 
+    url: '/wxml/post_login.xml',
+    type: "Post", 
+    timeout: 8000,
+    cache: false,
+    datatype: "xml",
+    data: { Name:username,password:password,rand:esc_rand}, 
+    success: function(data, status) {
+			var result = parseInt($(data).find("login_check").text());
+			if(result==0 || result ==2 || result ==4) $('#user').focus();
+			else $('#pwd').focus();
+			if(result==4) {
+			update_language();
+			$('#error_info').html("login timeout,please retry");
+			}
+			else if(result==5) $('#error_info').html("hacking detected");
+			else if(result==0) $('#error_info').html("username & password error");
+			else if(result==1) $('#error_info').html("password error");
+			else if(result==2) $('#error_info').html("username error");
+			else if(result==3) {
+				to_dial();
+				open_page("home.html");
+				return true;
+			}
+			lock_button=0;
+//			$('#login').attr({disabled:"false",class:'button'});
+    },
+    error: function(x, t, m){
+//    	$('#login').attr({disabled:"false",class:'button'});
+		lock_button=0;
+      if(t==="timeout"){
+
+      }  
+    }
+    })
+
+
+/*
+	if($('#user').val()=='admin' && $('#pwd').val()=='admin'){
+		window.sessionStorage.login=1;
+		window.sessionStorage.tar="setting.html";
+		location.href="index.html"
+	}
+	else{
+		session_storage.login=0;
+	}
+*/
+
+});
+
+</script>

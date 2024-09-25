@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<setting>
+<dsc><% get_version_dsc(); %></dsc>
+<state><% get_ruim_pin_state(); %></state>
+<pin><% get_ruim_pin_count(); %></pin>
+<puk><% get_ruim_puk_count(); %></puk>
+</setting>
